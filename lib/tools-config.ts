@@ -416,6 +416,10 @@ export function getToolsByCategory(category: ToolCategory): Tool[] {
   return tools.filter(tool => tool.category === category);
 }
 
+export function getLiveToolsByCategory(category: ToolCategory): Tool[] {
+  return tools.filter(tool => tool.category === category && tool.status === 'live');
+}
+
 export function getLiveTools(): Tool[] {
   return tools.filter(tool => tool.status === 'live');
 }

@@ -2,6 +2,7 @@ import { Tool, categories } from "@/lib/tools-config";
 import { AdSlot } from "./AdSlot";
 import { RelatedTools } from "./RelatedTools";
 import { ToolFAQ } from "./ToolFAQ";
+import { MoreTools } from "./MoreTools";
 
 interface ToolLayoutProps {
   tool: Tool;
@@ -28,7 +29,7 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
           <li>/</li>
           <li>
             <a 
-              href={`/tools?category=${tool.category}`} 
+              href={`/tools/${tool.category}`} 
               className="hover:text-blue-600 dark:hover:text-blue-400"
             >
               {categories[tool.category].name}
@@ -89,6 +90,9 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
 
       {/* Related Tools */}
       <RelatedTools currentSlug={tool.slug} />
+
+      {/* More Tools - Cross-category linking */}
+      <MoreTools currentSlug={tool.slug} currentCategory={tool.category} />
 
       {/* Bottom Ad Slot */}
       <AdSlot slot="bottom" className="mt-8 min-h-0" />
