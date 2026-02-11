@@ -91,7 +91,7 @@ export function MergePdf() {
       
       // Save the merged PDF
       const pdfBytes = await mergedPdf.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const blob = new Blob([pdfBytes.buffer], { type: 'application/pdf' });
       
       setResult(blob);
       trackConvertSuccess(TOOL_SLUG, 'application/pdf');
