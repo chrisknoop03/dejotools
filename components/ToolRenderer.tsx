@@ -27,11 +27,23 @@ const SplitPdf = dynamic(() => import("@/tools/pdf/SplitPdf").then(m => m.SplitP
   loading: () => <ToolLoading />
 });
 
+const CaptionFormatter = dynamic(() => import("@/tools/creator/CaptionFormatter").then(m => m.CaptionFormatter), {
+  loading: () => <ToolLoading />
+});
+
+const SrtFixer = dynamic(() => import("@/tools/creator/SrtFixer").then(m => m.SrtFixer), {
+  loading: () => <ToolLoading />
+});
+
 const JsonFormatter = dynamic(() => import("@/tools/dev/JsonFormatter").then(m => m.JsonFormatter), {
   loading: () => <ToolLoading />
 });
 
 const UuidGenerator = dynamic(() => import("@/tools/dev/UuidGenerator").then(m => m.UuidGenerator), {
+  loading: () => <ToolLoading />
+});
+
+const TimestampConverter = dynamic(() => import("@/tools/dev/TimestampConverter").then(m => m.TimestampConverter), {
   loading: () => <ToolLoading />
 });
 
@@ -51,8 +63,11 @@ const toolComponents: Record<string, React.ComponentType> = {
   'jpg-to-pdf': JpgToPdf,
   'merge-pdf': MergePdf,
   'split-pdf': SplitPdf,
+  'caption-formatter': CaptionFormatter,
+  'srt-fixer': SrtFixer,
   'json-formatter': JsonFormatter,
   'uuid-generator': UuidGenerator,
+  'timestamp-converter': TimestampConverter,
 };
 
 interface ToolRendererProps {

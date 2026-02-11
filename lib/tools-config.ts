@@ -229,50 +229,159 @@ export const tools: Tool[] = [
     icon: '📄'
   },
   {
+    slug: 'caption-formatter',
+    title: 'Caption Formatter',
+    description: 'Format your social media captions perfectly. Add line breaks, clean up spacing, and format text for Instagram, TikTok, Twitter, and more.',
+    category: 'creator',
+    keywords: ['caption formatter', 'instagram caption', 'tiktok caption', 'social media formatter', 'line break generator', 'caption cleaner', 'post formatter'],
+    faqs: [
+      {
+        q: 'What does this caption formatter do?',
+        a: 'It helps you format captions for social media by adding proper line breaks, cleaning up extra spaces, and ensuring your text looks perfect when posted.'
+      },
+      {
+        q: 'Which platforms does this work for?',
+        a: 'This formatter works for Instagram, TikTok, Twitter/X, Facebook, LinkedIn, and any other platform that uses text captions.'
+      },
+      {
+        q: 'How do I add line breaks?',
+        a: 'Simply press Enter where you want line breaks. The formatter will preserve them and add invisible characters if needed to ensure they display correctly on all platforms.'
+      },
+      {
+        q: 'Is my caption data saved?',
+        a: 'No, everything happens in your browser. Your captions are never uploaded or stored anywhere.'
+      },
+      {
+        q: 'Can I add emojis?',
+        a: 'Yes! You can include any emojis in your caption. The formatter will preserve them exactly as entered.'
+      }
+    ],
+    status: 'live',
+    icon: '✨'
+  },
+  {
+    slug: 'srt-fixer',
+    title: 'SRT Subtitle Fixer',
+    description: 'Fix and clean SRT subtitle files online. Remove formatting issues, fix line breaks, renumber sequences, and repair common subtitle problems.',
+    category: 'creator',
+    keywords: ['srt fixer', 'subtitle fixer', 'srt repair', 'fix subtitles', 'subtitle cleaner', 'srt editor', 'caption fixer', 'subtitle tool'],
+    faqs: [
+      {
+        q: 'What subtitle problems can this fix?',
+        a: 'This tool can fix incorrect sequence numbers, broken timestamps, extra line breaks, encoding issues, and other common SRT formatting problems.'
+      },
+      {
+        q: 'What is an SRT file?',
+        a: 'SRT (SubRip Subtitle) is a common subtitle format used by YouTube, video players, and editing software. It contains timed text that appears over video.'
+      },
+      {
+        q: 'Will this change my subtitle timing?',
+        a: 'No, the fixer preserves your original timing. It only repairs formatting issues without affecting when subtitles appear.'
+      },
+      {
+        q: 'Is my subtitle file uploaded?',
+        a: 'No, all processing happens locally in your browser. Your subtitle files never leave your device.'
+      },
+      {
+        q: 'Can I edit the subtitle text?',
+        a: 'This tool focuses on fixing formatting. For text editing, you would open the fixed file in a text editor or subtitle editing software.'
+      }
+    ],
+    status: 'live',
+    icon: '✨'
+  },
+  {
     slug: 'json-formatter',
     title: 'JSON Formatter & Validator',
-    description: 'Format, beautify, and validate JSON data online. Make your JSON readable with proper indentation and syntax highlighting.',
+    description: 'Format, beautify, and validate JSON data online for free. Make your JSON readable with proper indentation. Detect syntax errors instantly.',
     category: 'dev',
-    keywords: ['json formatter', 'json beautifier', 'json validator', 'format json'],
+    keywords: ['json formatter', 'json beautifier', 'json validator', 'format json', 'json pretty print', 'minify json', 'json lint', 'validate json online'],
     faqs: [
       {
         q: 'What does this JSON formatter do?',
-        a: 'It takes minified or messy JSON and formats it with proper indentation, making it easy to read and debug.'
+        a: 'It takes minified or messy JSON and formats it with proper indentation, making it easy to read and debug. You can also minify formatted JSON.'
       },
       {
         q: 'Does it validate my JSON?',
-        a: 'Yes, the formatter will detect and display any syntax errors in your JSON data.'
+        a: 'Yes, the formatter automatically detects and displays syntax errors in your JSON data, showing you exactly where the problem is.'
       },
       {
         q: 'Is my data secure?',
-        a: 'Absolutely. All processing happens locally in your browser. Your data is never sent to any server.'
+        a: 'Absolutely. All processing happens locally in your browser. Your JSON data is never sent to any server.'
+      },
+      {
+        q: 'Can I minify JSON too?',
+        a: 'Yes! Click the Minify button to compress your JSON by removing all whitespace, perfect for reducing file size.'
+      },
+      {
+        q: 'What indentation options are available?',
+        a: 'You can choose between 2 spaces, 4 spaces, or tabs for indentation based on your preference.'
       }
     ],
-    status: 'draft',
+    status: 'live',
     icon: '{ }'
   },
   {
     slug: 'uuid-generator',
     title: 'UUID Generator',
-    description: 'Generate random UUIDs (Universally Unique Identifiers) instantly. Create v4 UUIDs for your applications and databases.',
+    description: 'Generate random UUIDs (Universally Unique Identifiers) instantly online. Create single or bulk v4 UUIDs for your applications, databases, and APIs.',
     category: 'dev',
-    keywords: ['uuid generator', 'guid generator', 'unique id', 'random uuid'],
+    keywords: ['uuid generator', 'guid generator', 'unique id', 'random uuid', 'uuid v4', 'generate uuid online', 'bulk uuid', 'uuid creator'],
     faqs: [
       {
         q: 'What is a UUID?',
-        a: 'A UUID (Universally Unique Identifier) is a 128-bit identifier that is unique across all devices and time.'
+        a: 'A UUID (Universally Unique Identifier) is a 128-bit identifier that is virtually guaranteed to be unique across all devices and time. Also known as GUID.'
       },
       {
         q: 'What UUID version does this generate?',
-        a: 'This tool generates UUID v4, which uses random numbers to create the identifier.'
+        a: 'This tool generates UUID v4 (random), which uses cryptographically secure random numbers to create identifiers with an extremely low collision probability.'
       },
       {
         q: 'Can I generate multiple UUIDs at once?',
-        a: 'Yes, you can generate multiple UUIDs simultaneously and copy them all at once.'
+        a: 'Yes, you can generate up to 50 UUIDs at once and copy them all with a single click.'
+      },
+      {
+        q: 'Are the UUIDs truly random?',
+        a: 'Yes, we use the Web Crypto API (crypto.randomUUID) which provides cryptographically secure random generation.'
+      },
+      {
+        q: 'Can I get uppercase UUIDs?',
+        a: 'Yes! Toggle the uppercase option to generate UUIDs in uppercase format (e.g., A1B2C3D4-...).'
       }
     ],
-    status: 'draft',
+    status: 'live',
     icon: '🔑'
+  },
+  {
+    slug: 'timestamp-converter',
+    title: 'Unix Timestamp Converter',
+    description: 'Convert Unix timestamps to human-readable dates and vice versa. Support for seconds and milliseconds. Perfect for developers and debugging.',
+    category: 'dev',
+    keywords: ['timestamp converter', 'unix timestamp', 'epoch converter', 'date to timestamp', 'timestamp to date', 'unix time', 'epoch time', 'time converter'],
+    faqs: [
+      {
+        q: 'What is a Unix timestamp?',
+        a: 'A Unix timestamp (or Epoch time) is the number of seconds that have elapsed since January 1, 1970 (UTC). It is widely used in programming and databases.'
+      },
+      {
+        q: 'Does this support milliseconds?',
+        a: 'Yes! The converter automatically detects whether your timestamp is in seconds or milliseconds and converts accordingly.'
+      },
+      {
+        q: 'Can I convert a date to a timestamp?',
+        a: 'Yes, you can enter any date and time to get the corresponding Unix timestamp in both seconds and milliseconds.'
+      },
+      {
+        q: 'What timezone is used?',
+        a: 'The converter shows times in both your local timezone and UTC for easy reference.'
+      },
+      {
+        q: 'Is this tool free?',
+        a: 'Yes, completely free with no limitations. All processing happens in your browser.'
+      }
+    ],
+    status: 'live',
+    icon: '🛠️'
   }
 ];
 
