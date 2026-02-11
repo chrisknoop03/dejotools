@@ -1,6 +1,6 @@
 import { tools } from "@/lib/tools-config";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://dejotools.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://dejotools.online';
 
 export async function GET() {
   const liveTools = tools.filter(tool => tool.status === 'live');

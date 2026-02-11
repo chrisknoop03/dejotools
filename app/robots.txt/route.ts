@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://dejotools.com';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://dejotools.online';
 
 export async function GET() {
   const robotsTxt = `# https://www.robotstxt.org/robotstxt.html
