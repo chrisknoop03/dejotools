@@ -89,7 +89,7 @@ export function SplitPdf() {
       
       // Save the new PDF
       const pdfBytes = await newPdf.save();
-      const blob = new Blob([pdfBytes.buffer], { type: 'application/pdf' });
+      const blob = new Blob([pdfBytes as BlobPart], { type: 'application/pdf' });
       
       setResult(blob);
       trackConvertSuccess(TOOL_SLUG, 'application/pdf');
