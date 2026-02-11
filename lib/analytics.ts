@@ -2,6 +2,8 @@
 // Supports multiple providers: GA4, Plausible, Umami
 // Configure in environment variables
 
+import { trackPlausibleEvent } from "@/components/PlausibleProvider";
+
 type AnalyticsEvent = 
   | 'tool_view'
   | 'file_upload'
@@ -33,15 +35,12 @@ export function trackEvent(event: AnalyticsEvent, properties?: EventProperties):
     console.log('[Analytics]', event, properties);
   }
 
+  // Plausible Analytics (via npm package)
+  trackPlausibleEvent(event, properties as Record<string, string | number | boolean>);
+
   // Google Analytics 4 (gtag)
   if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag('event', event, properties);
-  }
-
-  // Plausible Analytics
-  if (typeof window !== 'undefined' && 'plausible' in window) {
-    (window as typeof window & { plausible: (event: string, options?: { props: EventProperties }) => void })
-      .plausible(event, { props: properties || {} });
   }
 
   // Umami Analytics

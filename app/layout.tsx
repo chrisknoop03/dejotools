@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { PlausibleProvider } from "@/components/PlausibleProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,16 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Plausible Analytics */}
-      {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
-        <Script
-          defer
-          data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
-          src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
-        />
-      )}
       <body className="min-h-screen bg-gray-50 dark:bg-gray-900 antialiased">
+        <PlausibleProvider>
         <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
           <nav className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
@@ -96,6 +88,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        </PlausibleProvider>
       </body>
     </html>
   );
