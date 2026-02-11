@@ -1,40 +1,37 @@
 "use client";
 
 import { useEffect } from "react";
-import Plausible from "@plausible-analytics/tracker";
-
-// Create a singleton instance
-let plausible: ReturnType<typeof Plausible> | null = null;
-
-function getPlausible() {
-  if (!plausible && typeof window !== "undefined") {
-    const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
-    if (domain) {
-      plausible = Plausible({
-        domain,
-        trackLocalhost: false,
-      });
-    }
-  }
-  return plausible;
-}
+import Script from "next/script";
 
 export function PlausibleProvider({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    const p = getPlausible();
-    if (p) {
-      // Enable automatic pageview tracking
-      p.enableAutoPageviews();
-    }
-  }, []);
+  const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 
-  return <>{children}</>;
+  return (
+    <>
+      {domain && (
+        <Script
+          defer
+          data-domain={domain}
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
+        />
+      )}
+      {children}
+    </>
+  );
 }
 
-// Export tracking functions for use in other components
+// Export tracking function for custom events
 export function trackPlausibleEvent(eventName: string, props?: Record<string, string | number | boolean>) {
-  const p = getPlausible();
-  if (p) {
-    p.trackEvent(eventName, { props });
+  if (typeof window !== "undefined" && "plausible" in window) {
+    const plausible = (window as typeof window & { 
+      plausible: (event: string, options?: { props: Record<string, string | number | boolean> }) => void 
+    }).plausible;
+    
+    if (props) {
+      plausible(eventName, { props });
+    } else {
+      plausible(eventName);
+    }
   }
 }
