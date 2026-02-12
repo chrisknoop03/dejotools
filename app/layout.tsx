@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PlausibleProvider } from "@/components/PlausibleProvider";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
@@ -31,13 +31,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 antialiased">
-        <PlausibleProvider>
+        <AnalyticsProvider>
           <Header />
           <main className="flex-1">
             {children}
           </main>
           <Footer />
-        </PlausibleProvider>
+        </AnalyticsProvider>
       </body>
     </html>
   );

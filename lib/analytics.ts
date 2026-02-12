@@ -1,8 +1,4 @@
-// Analytics event tracking
-// Supports multiple providers: GA4, Plausible, Umami
-// Configure in environment variables
-
-import { trackPlausibleEvent } from "@/components/PlausibleProvider";
+// Analytics event tracking - Google Analytics 4
 
 type AnalyticsEvent = 
   | 'tool_view'
@@ -24,8 +20,7 @@ interface EventProperties {
 const isBrowser = typeof window !== 'undefined';
 
 /**
- * Track an analytics event
- * Will send to configured analytics providers
+ * Track an analytics event via Google Analytics 4
  */
 export function trackEvent(event: AnalyticsEvent, properties?: EventProperties): void {
   if (!isBrowser) return;
@@ -35,18 +30,9 @@ export function trackEvent(event: AnalyticsEvent, properties?: EventProperties):
     console.log('[Analytics]', event, properties);
   }
 
-  // Plausible Analytics (via npm package)
-  trackPlausibleEvent(event, properties as Record<string, string | number | boolean>);
-
   // Google Analytics 4 (gtag)
   if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag('event', event, properties);
-  }
-
-  // Umami Analytics
-  if (typeof window !== 'undefined' && 'umami' in window) {
-    (window as typeof window & { umami: { track: (event: string, data?: EventProperties) => void } })
-      .umami.track(event, properties);
   }
 }
 
