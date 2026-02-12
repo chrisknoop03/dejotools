@@ -1,21 +1,19 @@
 "use client";
 
-import { useEffect } from "react";
 import Script from "next/script";
 
 export function PlausibleProvider({ children }: { children: React.ReactNode }) {
-  const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
-
   return (
     <>
-      {domain && (
-        <Script
-          defer
-          data-domain={domain}
-          src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
-        />
-      )}
+      {/* Privacy-friendly analytics by Plausible */}
+      <Script
+        async
+        src="https://plausible.io/js/pa-Ay1Ffly1Mi2sI255s_bqE.js"
+        strategy="afterInteractive"
+      />
+      <Script id="plausible-init" strategy="afterInteractive">
+        {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();`}
+      </Script>
       {children}
     </>
   );
