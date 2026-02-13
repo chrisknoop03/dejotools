@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   description: "Free online tools for image conversion, PDF editing, and developer utilities. Fast, secure, and works entirely in your browser.",
   keywords: ["online tools", "image converter", "pdf tools", "developer tools", "free utilities"],
   authors: [{ name: "DejoTools" }],
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_US",
