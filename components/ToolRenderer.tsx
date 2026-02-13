@@ -63,6 +63,14 @@ const UrlEncoder = dynamic(() => import("@/tools/dev/UrlEncoder").then(m => m.Ur
   loading: () => <ToolLoading />
 });
 
+const ColorConverter = dynamic(() => import("@/tools/dev/ColorConverter").then(m => m.ColorConverter), {
+  loading: () => <ToolLoading />
+});
+
+const CharacterCounter = dynamic(() => import("@/tools/creator/CharacterCounter").then(m => m.CharacterCounter), {
+  loading: () => <ToolLoading />
+});
+
 function ToolLoading() {
   return (
     <div className="flex items-center justify-center py-12">
@@ -88,6 +96,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'password-generator': PasswordGenerator,
   'lorem-ipsum-generator': LoremIpsumGenerator,
   'url-encode-decode': UrlEncoder,
+  'hex-rgb-converter': ColorConverter,
+  'character-counter': CharacterCounter,
 };
 
 interface ToolRendererProps {

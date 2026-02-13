@@ -506,6 +506,68 @@ export const tools: Tool[] = [
     ],
     status: 'live',
     icon: '🔗'
+  },
+  {
+    slug: 'hex-rgb-converter',
+    title: 'HEX to RGB Color Converter',
+    description: 'Convert colors between HEX, RGB, and HSL formats instantly. Free online color converter with live preview and easy copy functionality.',
+    category: 'dev',
+    keywords: ['hex to rgb', 'rgb to hex', 'color converter', 'hex color', 'rgb color', 'hsl converter', 'color picker', 'color code converter'],
+    faqs: [
+      {
+        q: 'What is HEX color?',
+        a: 'HEX color is a 6-digit hexadecimal representation of colors used in web design. It combines red, green, and blue values (e.g., #FF5733).'
+      },
+      {
+        q: 'What is RGB color?',
+        a: 'RGB stands for Red, Green, Blue. Each channel has a value from 0-255, combining to create millions of colors (e.g., rgb(255, 87, 51)).'
+      },
+      {
+        q: 'What is HSL color?',
+        a: 'HSL stands for Hue, Saturation, Lightness. It is often considered more intuitive for color selection as it separates color (hue) from intensity (saturation) and brightness (lightness).'
+      },
+      {
+        q: 'When should I use HEX vs RGB?',
+        a: 'HEX is more common in CSS and design tools for its compact format. RGB is useful when you need to manipulate individual color channels or use transparency (RGBA).'
+      },
+      {
+        q: 'Is this converter accurate?',
+        a: 'Yes, the conversions are mathematically precise. The tool converts between all formats without any loss of color information.'
+      }
+    ],
+    status: 'live',
+    icon: '🎨'
+  },
+  {
+    slug: 'character-counter',
+    title: 'Character Counter',
+    description: 'Count characters, words, sentences, and paragraphs instantly. Check your text against social media platform limits for Twitter, Instagram, TikTok, and more.',
+    category: 'creator',
+    keywords: ['character counter', 'word counter', 'letter count', 'twitter character limit', 'instagram caption length', 'text counter', 'character count online'],
+    faqs: [
+      {
+        q: 'What does this tool count?',
+        a: 'It counts characters (with and without spaces), words, sentences, paragraphs, and lines in real-time as you type.'
+      },
+      {
+        q: 'What platform limits are included?',
+        a: 'We show limits for Twitter/X, Instagram (caption and bio), TikTok (caption and bio), YouTube (title and description), Facebook, LinkedIn, and Pinterest.'
+      },
+      {
+        q: 'How are words counted?',
+        a: 'Words are counted by splitting text on whitespace. Multiple spaces between words are treated as single separators.'
+      },
+      {
+        q: 'How are sentences counted?',
+        a: 'Sentences are counted by splitting on periods, exclamation marks, and question marks.'
+      },
+      {
+        q: 'Is this tool free?',
+        a: 'Yes, completely free with no limitations. Count as much text as you need.'
+      }
+    ],
+    status: 'live',
+    icon: '📊'
   }
 ];
 
