@@ -47,6 +47,22 @@ const TimestampConverter = dynamic(() => import("@/tools/dev/TimestampConverter"
   loading: () => <ToolLoading />
 });
 
+const Base64Tool = dynamic(() => import("@/tools/dev/Base64Tool").then(m => m.Base64Tool), {
+  loading: () => <ToolLoading />
+});
+
+const PasswordGenerator = dynamic(() => import("@/tools/dev/PasswordGenerator").then(m => m.PasswordGenerator), {
+  loading: () => <ToolLoading />
+});
+
+const LoremIpsumGenerator = dynamic(() => import("@/tools/dev/LoremIpsumGenerator").then(m => m.LoremIpsumGenerator), {
+  loading: () => <ToolLoading />
+});
+
+const UrlEncoder = dynamic(() => import("@/tools/dev/UrlEncoder").then(m => m.UrlEncoder), {
+  loading: () => <ToolLoading />
+});
+
 function ToolLoading() {
   return (
     <div className="flex items-center justify-center py-12">
@@ -68,6 +84,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   'json-formatter': JsonFormatter,
   'uuid-generator': UuidGenerator,
   'timestamp-converter': TimestampConverter,
+  'base64-encode-decode': Base64Tool,
+  'password-generator': PasswordGenerator,
+  'lorem-ipsum-generator': LoremIpsumGenerator,
+  'url-encode-decode': UrlEncoder,
 };
 
 interface ToolRendererProps {

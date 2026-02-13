@@ -382,6 +382,130 @@ export const tools: Tool[] = [
     ],
     status: 'live',
     icon: '🛠️'
+  },
+  {
+    slug: 'base64-encode-decode',
+    title: 'Base64 Encode/Decode',
+    description: 'Encode text to Base64 or decode Base64 strings online. Fast, free, and secure browser-based conversion for developers.',
+    category: 'dev',
+    keywords: ['base64 encoder', 'base64 decoder', 'encode base64', 'decode base64', 'base64 converter', 'base64 online', 'text to base64'],
+    faqs: [
+      {
+        q: 'What is Base64 encoding?',
+        a: 'Base64 is a binary-to-text encoding scheme that represents binary data in ASCII string format. It is commonly used to encode data for URLs, emails, and data storage.'
+      },
+      {
+        q: 'Is this Base64 tool free?',
+        a: 'Yes, completely free with unlimited usage. All encoding and decoding happens directly in your browser.'
+      },
+      {
+        q: 'Is my data secure?',
+        a: 'Absolutely. All processing happens locally in your browser. Your data is never sent to any server.'
+      },
+      {
+        q: 'Can I encode special characters?',
+        a: 'Yes, this tool properly handles Unicode characters and special symbols when encoding and decoding.'
+      },
+      {
+        q: 'What is Base64 used for?',
+        a: 'Base64 is commonly used to embed images in HTML/CSS, encode data for APIs, store binary data in text formats, and transmit data through text-only channels.'
+      }
+    ],
+    status: 'live',
+    icon: '🔤'
+  },
+  {
+    slug: 'password-generator',
+    title: 'Password Generator',
+    description: 'Generate strong, secure random passwords online. Customize length and character types. Uses cryptographically secure random generation.',
+    category: 'dev',
+    keywords: ['password generator', 'random password', 'secure password', 'strong password', 'password creator', 'generate password online'],
+    faqs: [
+      {
+        q: 'Are these passwords truly random?',
+        a: 'Yes, we use the Web Crypto API (crypto.getRandomValues) which provides cryptographically secure random number generation.'
+      },
+      {
+        q: 'What makes a strong password?',
+        a: 'A strong password is at least 12-16 characters long and includes a mix of uppercase letters, lowercase letters, numbers, and special symbols.'
+      },
+      {
+        q: 'Are my generated passwords stored anywhere?',
+        a: 'No, passwords are generated entirely in your browser and are never sent to or stored on any server.'
+      },
+      {
+        q: 'How long should my password be?',
+        a: 'We recommend at least 16 characters for important accounts. Longer passwords are exponentially harder to crack.'
+      },
+      {
+        q: 'Can I exclude certain characters?',
+        a: 'Yes, you can toggle uppercase, lowercase, numbers, and symbols on or off to customize your password.'
+      }
+    ],
+    status: 'live',
+    icon: '🔐'
+  },
+  {
+    slug: 'lorem-ipsum-generator',
+    title: 'Lorem Ipsum Generator',
+    description: 'Generate placeholder text for your designs and mockups. Create paragraphs, sentences, or words of Lorem Ipsum text instantly.',
+    category: 'dev',
+    keywords: ['lorem ipsum', 'placeholder text', 'dummy text', 'filler text', 'lorem ipsum generator', 'sample text'],
+    faqs: [
+      {
+        q: 'What is Lorem Ipsum?',
+        a: 'Lorem Ipsum is placeholder text commonly used in design and publishing to demonstrate visual layouts without meaningful content distracting from the design.'
+      },
+      {
+        q: 'Is Lorem Ipsum real Latin?',
+        a: 'Lorem Ipsum is derived from a Latin text by Cicero from 45 BC, but it has been altered and scrambled over time so it is not proper Latin.'
+      },
+      {
+        q: 'Why use Lorem Ipsum?',
+        a: 'Lorem Ipsum provides realistic-looking text distribution that helps designers focus on layout and typography without being distracted by readable content.'
+      },
+      {
+        q: 'Can I generate specific amounts?',
+        a: 'Yes, you can generate a specific number of paragraphs, sentences, or words based on your needs.'
+      },
+      {
+        q: 'Is this tool free?',
+        a: 'Yes, completely free with no limitations. Generate as much placeholder text as you need.'
+      }
+    ],
+    status: 'live',
+    icon: '📝'
+  },
+  {
+    slug: 'url-encode-decode',
+    title: 'URL Encoder/Decoder',
+    description: 'Encode or decode URLs and query strings online. Supports both encodeURIComponent and encodeURI methods for different use cases.',
+    category: 'dev',
+    keywords: ['url encoder', 'url decoder', 'encode url', 'decode url', 'urlencode', 'percent encoding', 'query string encoder'],
+    faqs: [
+      {
+        q: 'What is URL encoding?',
+        a: 'URL encoding (percent-encoding) converts special characters into a format that can be safely transmitted in URLs. Spaces become %20, & becomes %26, etc.'
+      },
+      {
+        q: 'What is the difference between encodeURI and encodeURIComponent?',
+        a: 'encodeURI preserves URL structure characters like /, ?, and & while encodeURIComponent encodes everything except alphanumeric characters. Use encodeURIComponent for query parameter values.'
+      },
+      {
+        q: 'When should I encode URLs?',
+        a: 'Encode URLs when passing special characters in query parameters, when handling user input in URLs, or when embedding URLs within other URLs.'
+      },
+      {
+        q: 'Is this tool secure?',
+        a: 'Yes, all encoding and decoding happens locally in your browser. Your URLs are never sent to any server.'
+      },
+      {
+        q: 'Can I decode already encoded URLs?',
+        a: 'Yes, switch to decode mode to convert percent-encoded URLs back to readable text.'
+      }
+    ],
+    status: 'live',
+    icon: '🔗'
   }
 ];
 
