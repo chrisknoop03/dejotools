@@ -19,6 +19,13 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
           gtag('config', 'G-WY5NED1SN8');
         `}
       </Script>
+      {/* Google AdSense */}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4446391904396659"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       {children}
     </>
   );
