@@ -12,6 +12,10 @@ export async function GET() {
     { url: '/tools/pdf', priority: 0.9, changefreq: 'weekly' },
     { url: '/tools/creator', priority: 0.9, changefreq: 'weekly' },
     { url: '/tools/dev', priority: 0.9, changefreq: 'weekly' },
+    { url: '/blog', priority: 0.8, changefreq: 'weekly' },
+    { url: '/blog/essential-developer-tools-guide', priority: 0.7, changefreq: 'monthly' },
+    { url: '/blog/complete-image-conversion-guide', priority: 0.7, changefreq: 'monthly' },
+    { url: '/blog/pdf-tools-complete-guide', priority: 0.7, changefreq: 'monthly' },
     { url: '/privacy', priority: 0.3, changefreq: 'monthly' },
     { url: '/terms', priority: 0.3, changefreq: 'monthly' },
   ];
