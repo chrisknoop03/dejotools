@@ -79,6 +79,18 @@ const ColorConverter = dynamic(() => import("@/tools/dev/ColorConverter").then(m
   loading: () => <ToolLoading />
 });
 
+const JsonToCsv = dynamic(() => import("@/tools/dev/JsonToCsv").then(m => m.JsonToCsv), {
+  loading: () => <ToolLoading />
+});
+
+const RegexTester = dynamic(() => import("@/tools/dev/RegexTester").then(m => m.RegexTester), {
+  loading: () => <ToolLoading />
+});
+
+const HtmlEntities = dynamic(() => import("@/tools/dev/HtmlEntities").then(m => m.HtmlEntities), {
+  loading: () => <ToolLoading />
+});
+
 const CharacterCounter = dynamic(() => import("@/tools/creator/CharacterCounter").then(m => m.CharacterCounter), {
   loading: () => <ToolLoading />
 });
@@ -128,6 +140,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'lorem-ipsum-generator': LoremIpsumGenerator,
   'url-encode-decode': UrlEncoder,
   'hex-rgb-converter': ColorConverter,
+  'json-to-csv': JsonToCsv,
+  'regex-tester': RegexTester,
+  'html-entity-encoder': HtmlEntities,
   'character-counter': CharacterCounter,
   'hashtag-generator': HashtagGenerator,
   'tiktok-bio-formatter': TikTokBioFormatter,

@@ -587,6 +587,45 @@ export const tools: Tool[] = [
     icon: '🎨'
   },
   {
+    slug: 'json-to-csv',
+    title: 'JSON to CSV Converter',
+    description: 'Convert JSON arrays of objects to CSV format online. Choose comma, semicolon, or tab delimiter. Free, private, and runs in your browser.',
+    category: 'dev',
+    keywords: ['json to csv', 'convert json to csv', 'json csv converter', 'export json to csv', 'array to csv', 'json array csv'],
+    faqs: [
+      { q: 'What JSON format does this accept?', a: 'Paste a JSON array of objects, e.g. [{"name":"Alice","age":30}]. Each item must be an object; keys from the first object (and any extra keys in others) become CSV columns.' },
+      { q: 'Is my data uploaded?', a: 'No. Conversion runs entirely in your browser; your JSON never leaves your device.' }
+    ],
+    status: 'live',
+    icon: '📊'
+  },
+  {
+    slug: 'regex-tester',
+    title: 'Regex Tester',
+    description: 'Test regular expressions against sample text. See matches, indices, and a highlighted preview. Supports flags: global, ignore case, multiline.',
+    category: 'dev',
+    keywords: ['regex tester', 'regular expression tester', 'regex test', 'regex online', 'regex debug', 'test regex'],
+    faqs: [
+      { q: 'What regex syntax is supported?', a: 'Standard JavaScript (ECMAScript) regex syntax is supported. Use the pattern input and g, i, m flags as needed.' },
+      { q: 'Is there a match limit?', a: 'Match list shows up to 20 entries; the highlight preview shows all matches in the text.' }
+    ],
+    status: 'live',
+    icon: '🔍'
+  },
+  {
+    slug: 'html-entity-encoder',
+    title: 'HTML Entity Encoder / Decoder',
+    description: 'Encode special characters to HTML entities or decode entities to plain text. Handles ampersands, quotes, angle brackets, and common symbols.',
+    category: 'dev',
+    keywords: ['html entities', 'html encode', 'html decode', 'entity encoder', 'escape html', 'decode html entities'],
+    faqs: [
+      { q: 'When should I encode HTML entities?', a: 'Encode when inserting user input or untrusted data into HTML to prevent XSS and display issues (e.g. <, >, &, quotes).' },
+      { q: 'What entities are supported for decoding?', a: 'Numeric (&#123; &#x7B;) and named entities (e.g. &amp; &lt;) are decoded using the browser\'s parser.' }
+    ],
+    status: 'live',
+    icon: '🔐'
+  },
+  {
     slug: 'character-counter',
     title: 'Character Counter',
     description: 'Count characters, words, sentences, and paragraphs instantly. Check your text against social media platform limits for Twitter, Instagram, TikTok, and more.',
