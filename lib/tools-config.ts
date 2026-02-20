@@ -156,6 +156,59 @@ export const tools: Tool[] = [
     icon: '🖼️'
   },
   {
+    slug: 'png-to-webp',
+    title: 'PNG to WebP Converter',
+    description: 'Convert PNG images to WebP format online. Smaller file sizes with quality control. Preserves transparency. Free, private, browser-based.',
+    category: 'image',
+    keywords: ['png to webp', 'convert png to webp', 'png webp converter', 'webp converter', 'png webp online'],
+    faqs: [
+      { q: 'Is PNG to WebP conversion free?', a: 'Yes, completely free. Conversion runs in your browser; your images never leave your device.' },
+      { q: 'Does WebP support transparency?', a: 'Yes. WebP supports transparency and the converter preserves it.' },
+      { q: 'What is the quality slider?', a: 'Lower quality (e.g. 0.7) gives smaller files; higher (1) keeps quality closer to the original PNG.' }
+    ],
+    status: 'live',
+    icon: '🖼️'
+  },
+  {
+    slug: 'webp-to-png',
+    title: 'WebP to PNG Converter',
+    description: 'Convert WebP images to PNG format online. Preserve transparency and compatibility. Free, private, runs in your browser.',
+    category: 'image',
+    keywords: ['webp to png', 'convert webp to png', 'webp png converter', 'webp to png online'],
+    faqs: [
+      { q: 'Is this converter free?', a: 'Yes, free with no limits. All processing happens in your browser.' },
+      { q: 'Will transparency be preserved?', a: 'Yes. WebP transparency is converted to PNG alpha channel.' }
+    ],
+    status: 'live',
+    icon: '🖼️'
+  },
+  {
+    slug: 'favicon-generator',
+    title: 'Favicon Generator',
+    description: 'Generate favicon sizes from any image: 16×16, 32×32, 48×48, and 180×180 Apple touch icon. Download PNGs for your website.',
+    category: 'image',
+    keywords: ['favicon generator', 'favicon maker', 'create favicon', 'apple touch icon', 'favicon sizes', 'website icon'],
+    faqs: [
+      { q: 'What sizes are generated?', a: '16×16, 32×32, 48×48 (browser favicons) and 180×180 (Apple touch icon). All as PNG.' },
+      { q: 'Are my images uploaded?', a: 'No. Generation runs in your browser; your image never leaves your device.' }
+    ],
+    status: 'live',
+    icon: '🖼️'
+  },
+  {
+    slug: 'image-metadata-viewer',
+    title: 'Image Metadata Viewer',
+    description: 'View image dimensions, file size, and type. Download a copy without EXIF or other metadata for privacy or smaller files.',
+    category: 'image',
+    keywords: ['image metadata', 'exif viewer', 'image info', 'strip metadata', 'remove exif', 'image dimensions'],
+    faqs: [
+      { q: 'What info is shown?', a: 'File name, size in MB/bytes, MIME type, and dimensions (width × height in pixels).' },
+      { q: 'What does "copy without metadata" do?', a: 'Re-draws the image to a new PNG file. EXIF and other metadata are not copied, which can reduce size and improve privacy.' }
+    ],
+    status: 'live',
+    icon: '🖼️'
+  },
+  {
     slug: 'image-to-base64',
     title: 'Image to Base64',
     description: 'Convert images to Base64 data URL or raw Base64 string online. Perfect for embedding images in HTML, CSS, or APIs.',

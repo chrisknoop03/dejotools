@@ -27,6 +27,22 @@ const ImageToBase64 = dynamic(() => import("@/tools/image/ImageToBase64").then(m
   loading: () => <ToolLoading />
 });
 
+const PngToWebp = dynamic(() => import("@/tools/image/PngToWebp").then(m => m.PngToWebp), {
+  loading: () => <ToolLoading />
+});
+
+const WebpToPng = dynamic(() => import("@/tools/image/WebpToPng").then(m => m.WebpToPng), {
+  loading: () => <ToolLoading />
+});
+
+const FaviconGenerator = dynamic(() => import("@/tools/image/FaviconGenerator").then(m => m.FaviconGenerator), {
+  loading: () => <ToolLoading />
+});
+
+const ImageMetadataViewer = dynamic(() => import("@/tools/image/ImageMetadataViewer").then(m => m.ImageMetadataViewer), {
+  loading: () => <ToolLoading />
+});
+
 const JpgToPdf = dynamic(() => import("@/tools/pdf/JpgToPdf").then(m => m.JpgToPdf), {
   loading: () => <ToolLoading />
 });
@@ -127,6 +143,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   'image-compressor': ImageCompressor,
   'image-resizer': ImageResizer,
   'image-to-base64': ImageToBase64,
+  'png-to-webp': PngToWebp,
+  'webp-to-png': WebpToPng,
+  'favicon-generator': FaviconGenerator,
+  'image-metadata-viewer': ImageMetadataViewer,
   'jpg-to-pdf': JpgToPdf,
   'merge-pdf': MergePdf,
   'split-pdf': SplitPdf,
