@@ -500,6 +500,8 @@ export async function generateStaticParams() {
   }));
 }
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
+
 export async function generateMetadata({
   params,
 }: {
@@ -517,11 +519,15 @@ export async function generateMetadata({
   return {
     title: `${post.title} | DejoTools Blog`,
     description: post.description,
+    alternates: {
+      canonical: `${BASE_URL}/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
       publishedTime: post.date,
+      url: `${BASE_URL}/blog/${slug}`,
     },
   };
 }

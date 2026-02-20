@@ -1,5 +1,14 @@
 import { tools, categories, ToolCategory, getLiveTools } from "@/lib/tools-config";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: BASE_URL,
+  },
+};
 
 export default function Home() {
   const liveTools = getLiveTools();

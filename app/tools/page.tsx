@@ -1,9 +1,14 @@
 import { tools, categories, ToolCategory } from "@/lib/tools-config";
 import type { Metadata } from "next";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
+
 export const metadata: Metadata = {
   title: "All Tools",
   description: "Browse all free online tools - image converters, PDF editors, creator tools, and developer utilities.",
+  alternates: {
+    canonical: `${BASE_URL}/tools`,
+  },
 };
 
 export default async function ToolsPage({

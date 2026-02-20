@@ -1,9 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
+
 export const metadata: Metadata = {
   title: "Blog - Free Online Tools Guides & Tips | DejoTools",
   description: "Learn how to use free online tools effectively. Guides on image conversion, PDF editing, developer utilities, and more.",
+  alternates: {
+    canonical: `${BASE_URL}/blog`,
+  },
 };
 
 const blogPosts = [

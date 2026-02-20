@@ -2,6 +2,7 @@ import { getLiveToolsByCategory, categories } from "@/lib/tools-config";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
 const category = "image";
 const categoryInfo = categories[category];
 
@@ -9,10 +10,14 @@ export const metadata: Metadata = {
   title: `Free Online Image Tools - Convert, Compress & Edit Images | DejoTools`,
   description: "Free online image converter tools. Convert JPG to PNG, PNG to JPG, WebP to JPG and more. Fast, private, browser-based image processing. No upload required.",
   keywords: ["image converter", "jpg to png", "png to jpg", "webp converter", "image tools", "photo converter", "free image converter", "online image editor"],
+  alternates: {
+    canonical: `${BASE_URL}/tools/image`,
+  },
   openGraph: {
     title: "Free Online Image Tools | DejoTools",
     description: "Convert, compress, and edit images online for free. Fast, private, browser-based processing.",
     type: "website",
+    url: `${BASE_URL}/tools/image`,
   },
 };
 

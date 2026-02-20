@@ -2,6 +2,7 @@ import { getLiveToolsByCategory, categories } from "@/lib/tools-config";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
 const category = "dev";
 const categoryInfo = categories[category];
 
@@ -9,10 +10,14 @@ export const metadata: Metadata = {
   title: `Free Developer Tools - JSON Formatter, UUID Generator & More | DejoTools`,
   description: "Free online developer tools. Format JSON, generate UUIDs, convert timestamps, and more. Essential utilities for programmers and web developers.",
   keywords: ["developer tools", "json formatter", "uuid generator", "timestamp converter", "dev tools", "programmer tools", "web development", "coding tools"],
+  alternates: {
+    canonical: `${BASE_URL}/tools/dev`,
+  },
   openGraph: {
     title: "Free Developer Tools | DejoTools",
     description: "JSON formatter, UUID generator, timestamp converter, and more free dev utilities.",
     type: "website",
+    url: `${BASE_URL}/tools/dev`,
   },
 };
 

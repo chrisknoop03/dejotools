@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
+
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "DejoTools terms of service - understand the rules and guidelines for using our free online tools.",
+  alternates: {
+    canonical: `${BASE_URL}/terms`,
+  },
 };
 
 export default function TermsPage() {

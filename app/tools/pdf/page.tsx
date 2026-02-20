@@ -2,6 +2,7 @@ import { getLiveToolsByCategory, categories } from "@/lib/tools-config";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
 const category = "pdf";
 const categoryInfo = categories[category];
 
@@ -9,10 +10,14 @@ export const metadata: Metadata = {
   title: `Free Online PDF Tools - Merge, Split & Convert PDFs | DejoTools`,
   description: "Free online PDF tools. Merge multiple PDFs, split pages, convert images to PDF. Fast, secure, browser-based PDF processing. No software installation required.",
   keywords: ["pdf tools", "merge pdf", "split pdf", "pdf converter", "combine pdf", "pdf editor online", "free pdf tools", "jpg to pdf"],
+  alternates: {
+    canonical: `${BASE_URL}/tools/pdf`,
+  },
   openGraph: {
     title: "Free Online PDF Tools | DejoTools",
     description: "Merge, split, and convert PDF files online for free. Secure, browser-based processing.",
     type: "website",
+    url: `${BASE_URL}/tools/pdf`,
   },
 };
 

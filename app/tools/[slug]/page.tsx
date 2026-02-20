@@ -5,6 +5,8 @@ import { ToolLayout } from "@/components/ToolLayout";
 import { ToolRenderer } from "@/components/ToolRenderer";
 import { ToolViewTracker } from "@/components/ToolViewTracker";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
+
 interface ToolPageProps {
   params: Promise<{ slug: string }>;
 }
@@ -29,10 +31,14 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
     title: tool.title,
     description: tool.description,
     keywords: tool.keywords,
+    alternates: {
+      canonical: `${BASE_URL}/tools/${slug}`,
+    },
     openGraph: {
       title: `${tool.title} | DejoTools`,
       description: tool.description,
       type: "website",
+      url: `${BASE_URL}/tools/${slug}`,
     },
   };
 }

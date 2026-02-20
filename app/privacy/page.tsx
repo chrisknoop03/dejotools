@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "DejoTools privacy policy - learn how we handle your data and protect your privacy.",
+  alternates: {
+    canonical: `${BASE_URL}/privacy`,
+  },
 };
 
 export default function PrivacyPage() {

@@ -2,6 +2,7 @@ import { getLiveToolsByCategory, categories } from "@/lib/tools-config";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://dejotools.online";
 const category = "creator";
 const categoryInfo = categories[category];
 
@@ -9,10 +10,14 @@ export const metadata: Metadata = {
   title: `Free Creator Tools - Caption Formatter, SRT Fixer & More | DejoTools`,
   description: "Free online tools for content creators. Format social media captions, fix SRT subtitles, and more. Perfect for YouTubers, TikTokers, and social media managers.",
   keywords: ["creator tools", "caption formatter", "srt fixer", "subtitle tools", "social media tools", "content creator", "instagram tools", "youtube tools"],
+  alternates: {
+    canonical: `${BASE_URL}/tools/creator`,
+  },
   openGraph: {
     title: "Free Creator Tools | DejoTools",
     description: "Format captions, fix subtitles, and optimize your content. Free tools for creators.",
     type: "website",
+    url: `${BASE_URL}/tools/creator`,
   },
 };
 
