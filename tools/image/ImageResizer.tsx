@@ -21,6 +21,8 @@ const PRESETS = [
 export function ImageResizer() {
   const [result, setResult] = useState<Blob | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
+  const [originalImage, setOriginalImage] = useState<HTMLImageElement | null>(null);
+  const [originalImageSrc, setOriginalImageSrc] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [originalName, setOriginalName] = useState("");
   const [presetIndex, setPresetIndex] = useState(0);
@@ -50,10 +52,48 @@ export function ImageResizer() {
     [presetIndex, customWidth, customHeight, keepAspect]
   );
 
+  const performResize = useCallback(() => {
+    if (!originalImage) return;
+    
+    setIsProcessing(true);
+    const { width, height } = getTargetSize(originalImage.width, originalImage.height);
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      trackConvertError(TOOL_SLUG, "Canvas context not available");
+      setIsProcessing(false);
+      return;
+    }
+    ctx.drawImage(originalImage, 0, 0, width, height);
+
+    canvas.toBlob(
+      (blob) => {
+        if (blob) {
+          if (preview) URL.revokeObjectURL(preview);
+          setResult(blob);
+          setPreview(URL.createObjectURL(blob));
+          trackConvertSuccess(TOOL_SLUG, blob.type);
+        } else {
+          trackConvertError(TOOL_SLUG, "Failed to create blob");
+        }
+        setIsProcessing(false);
+      },
+      "image/png"
+    );
+  }, [originalImage, getTargetSize, preview]);
+
   const handleFileSelect = useCallback(
     async (file: File) => {
-      setIsProcessing(true);
       setOriginalName(file.name.replace(/\.[^/.]+$/, "") + "-resized");
+      
+      // Clear previous results
+      if (preview) URL.revokeObjectURL(preview);
+      if (originalImageSrc) URL.revokeObjectURL(originalImageSrc);
+      setResult(null);
+      setPreview(null);
+      setOriginalImage(null);
 
       try {
         const img = new Image();
@@ -61,57 +101,36 @@ export function ImageResizer() {
 
         reader.onload = (e) => {
           img.onload = () => {
-            const { width, height } = getTargetSize(img.width, img.height);
-            const canvas = document.createElement("canvas");
-            canvas.width = width;
-            canvas.height = height;
-            const ctx = canvas.getContext("2d");
-            if (!ctx) {
-              trackConvertError(TOOL_SLUG, "Canvas context not available");
-              setIsProcessing(false);
-              return;
-            }
-            ctx.drawImage(img, 0, 0, width, height);
-
-            canvas.toBlob(
-              (blob) => {
-                if (blob) {
-                  setResult(blob);
-                  setPreview(URL.createObjectURL(blob));
-                  trackConvertSuccess(TOOL_SLUG, blob.type);
-                } else {
-                  trackConvertError(TOOL_SLUG, "Failed to create blob");
-                }
-                setIsProcessing(false);
-              },
-              "image/png"
-            );
+            setOriginalImage(img);
+            setOriginalImageSrc(e.target?.result as string);
+            // Auto-resize on first load
+            setTimeout(() => performResize(), 100);
           };
           img.onerror = () => {
             trackConvertError(TOOL_SLUG, "Failed to load image");
-            setIsProcessing(false);
           };
           img.src = e.target?.result as string;
         };
         reader.onerror = () => {
           trackConvertError(TOOL_SLUG, "Failed to read file");
-          setIsProcessing(false);
         };
         reader.readAsDataURL(file);
       } catch (error) {
         trackConvertError(TOOL_SLUG, String(error));
-        setIsProcessing(false);
       }
     },
-    [getTargetSize]
+    [performResize, preview, originalImageSrc]
   );
 
   const handleReset = useCallback(() => {
     if (preview) URL.revokeObjectURL(preview);
+    if (originalImageSrc) URL.revokeObjectURL(originalImageSrc);
     setResult(null);
     setPreview(null);
+    setOriginalImage(null);
+    setOriginalImageSrc(null);
     setOriginalName("");
-  }, [preview]);
+  }, [preview, originalImageSrc]);
 
   return (
     <div className="space-y-6">
@@ -188,7 +207,31 @@ export function ImageResizer() {
         </div>
       )}
 
-      {result && (
+      {originalImage && (
+        <div className="flex gap-3">
+          <button
+            onClick={performResize}
+            disabled={isProcessing}
+            className="flex-1 py-3 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isProcessing ? "Resizing..." : "Resize Image"}
+          </button>
+          {originalImageSrc && (
+            <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center">
+              Original: {originalImage.width}×{originalImage.height}px
+            </div>
+          )}
+        </div>
+      )}
+
+      {isProcessing && (
+        <div className="flex flex-col items-center justify-center py-12">
+          <div className="w-12 h-12 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Resizing image...</p>
+        </div>
+      )}
+
+      {result && !isProcessing && (
         <ResultBox
           result={result}
           filename={`${originalName}.png`}
