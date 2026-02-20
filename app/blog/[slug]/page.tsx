@@ -492,6 +492,266 @@ const blogPosts: Record<
       </>
     ),
   },
+  "social-media-content-tools-guide": {
+    title: "Free Social Media Content Tools: Hashtags, Captions & Bio Tips",
+    description:
+      "Create better posts with free online tools for hashtags, character counts, captions, and bios. No signup, all in your browser.",
+    date: "2026-02-11",
+    category: "Creator Tools",
+    content: (
+      <>
+        <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+          Strong captions, the right hashtags, and polished bios can make a real
+          difference on Instagram, TikTok, and other platforms. You don&apos;t
+          need paid apps—free browser-based tools can help you with character
+          limits, formatting, and ideas. Here&apos;s how to use them.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Stay Within Platform Limits
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Every platform has character limits for captions, bios, and titles. A{" "}
+          <Link
+            href="/tools/character-counter"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            character counter
+          </Link>{" "}
+          shows you exactly how many characters and words you&apos;ve used, plus
+          limits for Twitter, Instagram, TikTok, YouTube, and more. Paste your
+          draft and trim before you post so nothing gets cut off.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Format Captions for Readability
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Line breaks and spacing make captions easier to read. Our{" "}
+          <Link
+            href="/tools/caption-formatter"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            caption formatter
+          </Link>{" "}
+          cleans up pasted text so line breaks display correctly on Instagram
+          and other apps. Paste from Notes or Word, format in one click, then
+          copy into the app. No more single-block paragraphs.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Find and Format Hashtags
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Hashtags help people discover your content. A{" "}
+          <Link
+            href="/tools/hashtag-generator"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            hashtag generator
+          </Link>{" "}
+          suggests relevant tags based on your topic so you don&apos;t have to
+          guess. Use a mix of popular and niche tags, and keep them organized—
+          many creators put hashtags in the first comment or after line breaks
+          in the caption.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Polish Your Bio
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Bios are short but important. The{" "}
+          <Link
+            href="/tools/tiktok-bio-formatter"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            TikTok bio formatter
+          </Link>{" "}
+          helps you fit your message into tight character limits and format
+          line breaks so your bio looks right in the app. The same idea works
+          for Instagram or other platforms with short bio fields.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Stand Out with Styled Text
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Fancy Unicode characters and small caps can make usernames or
+          captions stand out. Our{" "}
+          <Link
+            href="/tools/fancy-text-generator"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            fancy text generator
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="/tools/emoji-text-generator"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            emoji text generator
+          </Link>{" "}
+          let you create stylized or emoji-filled text to copy into bios and
+          posts. Use them sparingly so your profile stays readable.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Quick Tips for Better Content
+        </h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400 mb-6 ml-4">
+          <li>Check character limits before posting so captions aren&apos;t cut off</li>
+          <li>Use line breaks in captions—formatted text is easier to read</li>
+          <li>Mix broad and niche hashtags for reach and relevance</li>
+          <li>Keep bios short and clear; use formatters to fit platform limits</li>
+          <li>All these tools run in your browser; nothing is stored or shared</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Conclusion
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          You don&apos;t need expensive social media tools to improve captions,
+          hashtags, and bios. Free online tools for character counting,
+          caption formatting, hashtag ideas, and bio formatting run right in your
+          browser with no signup. Use them to stay within limits and present
+          your content in a clean, professional way.
+        </p>
+      </>
+    ),
+  },
+  "web-images-favicons-guide": {
+    title: "Web Images & Favicons: Formats, Sizes, and Free Tools",
+    description:
+      "Get your site visuals right. Favicon sizes, image formats for the web, compression, and metadata—all with free browser-based tools.",
+    date: "2026-02-11",
+    category: "Image Tools",
+    content: (
+      <>
+        <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+          Icons, favicons, and images affect how your site looks and loads.
+          Getting the right sizes and formats doesn&apos;t require expensive
+          software—free browser-based tools can generate favicons, convert
+          formats, compress images, and strip metadata. This guide walks you
+          through the basics.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Favicons: What You Need
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          A favicon is the small icon that appears in browser tabs and
+          bookmarks. Sites typically need 16×16 and 32×32 for browsers, and
+          180×180 for Apple touch icons. Instead of resizing by hand, use a{" "}
+          <Link
+            href="/tools/favicon-generator"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            favicon generator
+          </Link>{" "}
+          to upload one image and download all common sizes as PNGs. Drop your
+          logo or icon, get 16×16, 32×32, 48×48, and 180×180 in one go—no
+          signup, everything runs in your browser.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Image Formats for the Web
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          JPG is best for photos, PNG for graphics and transparency, and WebP
+          for smaller file sizes when browsers support it. Convert between them
+          as needed: use our{" "}
+          <Link
+            href="/tools/png-to-webp"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            PNG to WebP
+          </Link>{" "}
+          or{" "}
+          <Link
+            href="/tools/webp-to-png"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            WebP to PNG
+          </Link>{" "}
+          converters to switch formats without leaving your browser. WebP often
+          reduces size by 25–35% compared to JPG or PNG while keeping quality.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Keep File Sizes Down
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Large images slow down pages. An{" "}
+          <Link
+            href="/tools/image-compressor"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            image compressor
+          </Link>{" "}
+          lets you reduce file size with a quality slider—lower quality means
+          smaller files. For hero images and photos, compressing before upload
+          can significantly improve load times. Our compressor works on JPG,
+          PNG, and WebP and runs entirely in your browser.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Resize for Layouts
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Uploading full-resolution images when you only need 800px wide wastes
+          bandwidth. Use an{" "}
+          <Link
+            href="/tools/image-resizer"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            image resizer
+          </Link>{" "}
+          to scale down to preset dimensions (e.g. social sizes) or custom
+          width and height. Resizing before upload keeps pages fast and
+          responsive.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Check or Strip Image Metadata
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Images can contain EXIF data (camera, location, etc.). For privacy or
+          smaller files, you may want to remove it. An{" "}
+          <Link
+            href="/tools/image-metadata-viewer"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            image metadata viewer
+          </Link>{" "}
+          shows dimensions, file size, and type; you can then download a copy
+          without metadata. Useful for protecting privacy or trimming a few
+          extra bytes.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Best Practices
+        </h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400 mb-6 ml-4">
+          <li>Provide at least 16×16 and 180×180 for favicons and Apple devices</li>
+          <li>Prefer WebP for photos when you can; fall back to JPG for compatibility</li>
+          <li>Compress and resize images before uploading to improve performance</li>
+          <li>Strip metadata from images if you care about privacy or file size</li>
+          <li>All tools mentioned run locally—your images never leave your device</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Conclusion
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Favicons, formats, compression, and metadata don&apos;t have to be
+          complicated. Free online tools handle favicon generation, format
+          conversion, resizing, and metadata stripping directly in your browser.
+          Use them to get your web images and icons right without installing
+          software or sending files to a server.
+        </p>
+      </>
+    ),
+  },
 };
 
 export async function generateStaticParams() {

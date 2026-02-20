@@ -33,6 +33,20 @@ const blogPosts = [
     date: "2026-02-13",
     category: "PDF Tools",
   },
+  {
+    slug: "social-media-content-tools-guide",
+    title: "Free Social Media Content Tools: Hashtags, Captions & Bio Tips",
+    description: "Create better posts with free online tools for hashtags, character counts, captions, and bios. No signup, all in your browser.",
+    date: "2026-02-11",
+    category: "Creator Tools",
+  },
+  {
+    slug: "web-images-favicons-guide",
+    title: "Web Images & Favicons: Formats, Sizes, and Free Tools",
+    description: "Get your site visuals right. Favicon sizes, image formats for the web, compression, and metadata—all with free browser-based tools.",
+    date: "2026-02-11",
+    category: "Image Tools",
+  },
 ];
 
 export default function BlogPage() {
