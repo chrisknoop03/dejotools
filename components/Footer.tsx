@@ -56,6 +56,29 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* More */}
+          <div>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">More</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link 
+                  href="/blog" 
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/tools" 
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  All Tools
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Legal */}
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Legal</h3>

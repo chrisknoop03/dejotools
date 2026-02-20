@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Tool, categories } from "@/lib/tools-config";
 import { AdSlot } from "./AdSlot";
 import { RelatedTools } from "./RelatedTools";
@@ -79,6 +80,9 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
           <p>
             Simply upload your file, wait for the processing to complete, and download the result. 
             It's fast, free, and works on any device with a modern web browser.
+          </p>
+          <p>
+            Explore more <Link href={`/tools/${tool.category}`} className="text-blue-600 dark:text-blue-400 hover:underline">{categories[tool.category].name} tools</Link> on our site.
           </p>
         </div>
       </section>
