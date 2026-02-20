@@ -45,13 +45,6 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4446391904396659"
           crossOrigin="anonymous"
         />
-        {/* Monetag Multitag */}
-        <script
-          src="https://quge5.com/88/tag.min.js"
-          data-zone="212057"
-          async
-          data-cfasync="false"
-        />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 antialiased">
         <AnalyticsProvider>
