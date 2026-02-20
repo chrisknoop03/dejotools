@@ -124,6 +124,54 @@ export const tools: Tool[] = [
     icon: '🖼️'
   },
   {
+    slug: 'image-compressor',
+    title: 'Image Compressor',
+    description: 'Compress JPG, PNG, and WebP images online. Reduce file size with a quality slider. Fast, private, browser-based compression.',
+    category: 'image',
+    keywords: ['image compressor', 'compress image', 'reduce image size', 'image optimizer', 'compress jpg', 'compress png', 'shrink image'],
+    faqs: [
+      { q: 'Is this image compressor free?', a: 'Yes, completely free with no limits. All compression happens in your browser.' },
+      { q: 'Does compression reduce quality?', a: 'For JPG/WebP you can choose quality (10-100%). Lower quality means smaller files. PNG is lossless.' },
+      { q: 'Are my images uploaded?', a: 'No, processing is done locally in your browser. Your images never leave your device.' },
+      { q: 'What formats are supported?', a: 'JPG, PNG, and WebP. Output is JPG for photos (with quality control) or PNG for graphics.' },
+      { q: 'What is the max file size?', a: 'Up to 50MB per image. Very large images may take a few seconds to process.' }
+    ],
+    status: 'live',
+    icon: '🖼️'
+  },
+  {
+    slug: 'image-resizer',
+    title: 'Image Resizer',
+    description: 'Resize images online with presets for Instagram, YouTube, Facebook, Twitter, and more. Custom dimensions and aspect ratio option.',
+    category: 'image',
+    keywords: ['image resizer', 'resize image', 'instagram size', 'youtube thumbnail size', 'resize photo online', 'image dimensions'],
+    faqs: [
+      { q: 'What size presets are available?', a: 'Instagram Post (1080×1080), Portrait, Landscape, YouTube Thumbnail (1280×720), Facebook Cover, Twitter, Pinterest Pin, and custom.' },
+      { q: 'Can I keep aspect ratio?', a: 'Yes. In Custom mode, check "Keep aspect ratio" and set width or height; the other is calculated automatically.' },
+      { q: 'Are my images uploaded?', a: 'No, resizing happens entirely in your browser. Your images stay on your device.' },
+      { q: 'What format is the output?', a: 'Resized images are output as PNG to preserve quality. You can use our converters if you need JPG.' },
+      { q: 'What is the max dimensions?', a: 'Custom width and height can be set up to 4096 pixels.' }
+    ],
+    status: 'live',
+    icon: '🖼️'
+  },
+  {
+    slug: 'image-to-base64',
+    title: 'Image to Base64',
+    description: 'Convert images to Base64 data URL or raw Base64 string online. Perfect for embedding images in HTML, CSS, or APIs.',
+    category: 'image',
+    keywords: ['image to base64', 'base64 image', 'convert image base64', 'image data url', 'embed image', 'base64 encoder image'],
+    faqs: [
+      { q: 'What is Base64 for images?', a: 'Base64 encodes binary image data as text. Data URLs (data:image/png;base64,...) can embed images directly in HTML or CSS.' },
+      { q: 'Data URL vs raw Base64?', a: 'Data URL includes the MIME type and is ready to use in src or url(). Raw Base64 is just the encoded string.' },
+      { q: 'Are my images uploaded?', a: 'No, conversion happens in your browser. Your images are never sent to any server.' },
+      { q: 'What is the max file size?', a: 'We recommend under 10MB. Large images produce very long strings that can be slow to copy or use.' },
+      { q: 'What formats work?', a: 'JPG, PNG, WebP, and GIF. The output includes the same format in the data URL.' }
+    ],
+    status: 'live',
+    icon: '🖼️'
+  },
+  {
     slug: 'jpg-to-pdf',
     title: 'JPG to PDF Converter',
     description: 'Convert JPG/JPEG images to PDF documents online for free. Create professional PDFs from your photos and images instantly in your browser.',

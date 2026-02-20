@@ -15,6 +15,18 @@ const WebpToJpg = dynamic(() => import("@/tools/image/WebpToJpg").then(m => m.We
   loading: () => <ToolLoading />
 });
 
+const ImageCompressor = dynamic(() => import("@/tools/image/ImageCompressor").then(m => m.ImageCompressor), {
+  loading: () => <ToolLoading />
+});
+
+const ImageResizer = dynamic(() => import("@/tools/image/ImageResizer").then(m => m.ImageResizer), {
+  loading: () => <ToolLoading />
+});
+
+const ImageToBase64 = dynamic(() => import("@/tools/image/ImageToBase64").then(m => m.ImageToBase64), {
+  loading: () => <ToolLoading />
+});
+
 const JpgToPdf = dynamic(() => import("@/tools/pdf/JpgToPdf").then(m => m.JpgToPdf), {
   loading: () => <ToolLoading />
 });
@@ -100,6 +112,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'jpg-to-png': JpgToPng,
   'png-to-jpg': PngToJpg,
   'webp-to-jpg': WebpToJpg,
+  'image-compressor': ImageCompressor,
+  'image-resizer': ImageResizer,
+  'image-to-base64': ImageToBase64,
   'jpg-to-pdf': JpgToPdf,
   'merge-pdf': MergePdf,
   'split-pdf': SplitPdf,

@@ -49,6 +49,12 @@ export function Header() {
               </div>
             </div>
             <Link 
+              href="/tools/image" 
+              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Image
+            </Link>
+            <Link 
               href="/blog" 
               className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
@@ -103,6 +109,13 @@ export function Header() {
                 </Link>
               ))}
               <hr className="my-2 border-gray-200 dark:border-gray-700" />
+              <Link 
+                href="/tools/image"
+                className="block px-2 py-2 text-gray-600 dark:text-gray-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                🖼️ Image
+              </Link>
               <Link 
                 href="/blog"
                 className="block px-2 py-2 text-gray-600 dark:text-gray-300"
