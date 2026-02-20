@@ -71,6 +71,22 @@ const CharacterCounter = dynamic(() => import("@/tools/creator/CharacterCounter"
   loading: () => <ToolLoading />
 });
 
+const HashtagGenerator = dynamic(() => import("@/tools/creator/HashtagGenerator").then(m => m.HashtagGenerator), {
+  loading: () => <ToolLoading />
+});
+
+const TikTokBioFormatter = dynamic(() => import("@/tools/creator/TikTokBioFormatter").then(m => m.TikTokBioFormatter), {
+  loading: () => <ToolLoading />
+});
+
+const FancyTextGenerator = dynamic(() => import("@/tools/creator/FancyTextGenerator").then(m => m.FancyTextGenerator), {
+  loading: () => <ToolLoading />
+});
+
+const EmojiTextGenerator = dynamic(() => import("@/tools/creator/EmojiTextGenerator").then(m => m.EmojiTextGenerator), {
+  loading: () => <ToolLoading />
+});
+
 function ToolLoading() {
   return (
     <div className="flex items-center justify-center py-12">
@@ -98,6 +114,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   'url-encode-decode': UrlEncoder,
   'hex-rgb-converter': ColorConverter,
   'character-counter': CharacterCounter,
+  'hashtag-generator': HashtagGenerator,
+  'tiktok-bio-formatter': TikTokBioFormatter,
+  'fancy-text-generator': FancyTextGenerator,
+  'emoji-text-generator': EmojiTextGenerator,
 };
 
 interface ToolRendererProps {

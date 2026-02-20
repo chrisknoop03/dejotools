@@ -568,6 +568,130 @@ export const tools: Tool[] = [
     ],
     status: 'live',
     icon: '📊'
+  },
+  {
+    slug: 'hashtag-generator',
+    title: 'Hashtag Generator',
+    description: 'Generate hashtags from text or use popular hashtags for Instagram, TikTok, YouTube, and more. Create, organize, and copy hashtags in multiple formats.',
+    category: 'creator',
+    keywords: ['hashtag generator', 'instagram hashtags', 'tiktok hashtags', 'hashtag creator', 'popular hashtags', 'hashtag tool', 'social media hashtags'],
+    faqs: [
+      {
+        q: 'How do I generate hashtags from text?',
+        a: 'Simply enter keywords or a description, and the tool will automatically convert each word into a hashtag. For example, "beautiful sunset beach" becomes #beautiful #sunset #beach.'
+      },
+      {
+        q: 'What platforms are supported?',
+        a: 'We provide popular hashtags for Instagram, TikTok, YouTube, and general use. Each platform has curated hashtags that perform well.'
+      },
+      {
+        q: 'Can I customize my hashtag list?',
+        a: 'Yes! You can add individual hashtags from the popular list, remove ones you don\'t want, and organize them before copying.'
+      },
+      {
+        q: 'What copy formats are available?',
+        a: 'You can copy hashtags with spaces, line breaks, or commas - perfect for different social media platforms and use cases.'
+      },
+      {
+        q: 'Is this tool free?',
+        a: 'Yes, completely free with unlimited hashtag generation. No signup required.'
+      }
+    ],
+    status: 'live',
+    icon: '🏷️'
+  },
+  {
+    slug: 'tiktok-bio-formatter',
+    title: 'TikTok Bio Formatter',
+    description: 'Format your TikTok bio perfectly. Add line breaks, clean up spacing, and optimize your bio for maximum impact. Check character count against TikTok limits.',
+    category: 'creator',
+    keywords: ['tiktok bio', 'tiktok bio formatter', 'tiktok bio generator', 'format tiktok bio', 'tiktok bio editor', 'bio formatter'],
+    faqs: [
+      {
+        q: 'What is the TikTok bio character limit?',
+        a: 'TikTok bios have a limit of 80 characters. Our tool shows you the character count and warns you if you exceed the limit.'
+      },
+      {
+        q: 'How does the formatter work?',
+        a: 'The formatter cleans up extra spaces, adds proper line breaks after sentences, and ensures your bio looks professional and readable.'
+      },
+      {
+        q: 'Can I use emojis in my bio?',
+        a: 'Yes! The formatter preserves emojis and ensures proper spacing around them for better readability.'
+      },
+      {
+        q: 'Is my bio data saved?',
+        a: 'No, all formatting happens locally in your browser. Your bio text is never uploaded or stored anywhere.'
+      },
+      {
+        q: 'What makes a good TikTok bio?',
+        a: 'A good TikTok bio is concise, uses line breaks to separate key points, includes relevant emojis, and has a clear call-to-action or link.'
+      }
+    ],
+    status: 'live',
+    icon: '🎵'
+  },
+  {
+    slug: 'fancy-text-generator',
+    title: 'Fancy Unicode Text Generator',
+    description: 'Transform your text into fancy Unicode styles. Generate bold, italic, bubble, upside-down, and other stylish text formats for social media.',
+    category: 'creator',
+    keywords: ['fancy text', 'unicode text', 'bold text generator', 'italic text', 'bubble text', 'stylish text', 'fancy font generator', 'unicode converter'],
+    faqs: [
+      {
+        q: 'What text styles are available?',
+        a: 'We offer bold, italic, bold italic, strikethrough, small caps, upside-down, and bubble text styles using Unicode characters.'
+      },
+      {
+        q: 'Where can I use fancy text?',
+        a: 'Fancy Unicode text works on most social media platforms including Instagram, TikTok, Twitter/X, Facebook, and Discord.'
+      },
+      {
+        q: 'Will fancy text work everywhere?',
+        a: 'Most modern platforms support Unicode text, but some older systems or apps may not display all styles correctly.'
+      },
+      {
+        q: 'Can I combine multiple styles?',
+        a: 'Each style is applied independently. You can generate text in one style, copy it, then apply another style if needed.'
+      },
+      {
+        q: 'Is this tool free?',
+        a: 'Yes, completely free with unlimited text generation. No signup or payment required.'
+      }
+    ],
+    status: 'live',
+    icon: '✨'
+  },
+  {
+    slug: 'emoji-text-generator',
+    title: 'Emoji Text Generator',
+    description: 'Add emojis to your text automatically. Choose from faces, hearts, gestures, objects, nature, and food emojis. Perfect for social media posts and captions.',
+    category: 'creator',
+    keywords: ['emoji text', 'add emojis', 'emoji generator', 'emoji text generator', 'emoji between words', 'social media emojis'],
+    faqs: [
+      {
+        q: 'How do I add emojis to my text?',
+        a: 'Enter your text and choose a placement mode: between words, around words, at the start, or at the end of each word.'
+      },
+      {
+        q: 'What emoji categories are available?',
+        a: 'We offer faces, hearts, gestures, objects, nature, and food emoji categories. Each category has 20+ emojis.'
+      },
+      {
+        q: 'Can I choose specific emojis?',
+        a: 'The tool randomly selects emojis from your chosen category. Each generation will have different emojis for variety.'
+      },
+      {
+        q: 'Where can I use emoji text?',
+        a: 'Emoji text works on all major social media platforms including Instagram, TikTok, Twitter/X, Facebook, and more.'
+      },
+      {
+        q: 'Is this tool free?',
+        a: 'Yes, completely free with unlimited emoji text generation. No signup required.'
+      }
+    ],
+    status: 'live',
+    icon: '😊'
   }
 ];
 
