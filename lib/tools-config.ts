@@ -679,6 +679,32 @@ export const tools: Tool[] = [
     icon: '🔐'
   },
   {
+    slug: 'csv-to-json',
+    title: 'CSV to JSON Converter',
+    description: 'Convert CSV to JSON array of objects online. First row becomes keys. Choose comma, semicolon, or tab delimiter. Free, private, runs in your browser.',
+    category: 'dev',
+    keywords: ['csv to json', 'convert csv to json', 'csv json converter', 'csv parser', 'export csv json'],
+    faqs: [
+      { q: 'How does CSV to JSON work?', a: 'The first row of your CSV is used as object keys. Each following row becomes one object. Choose the delimiter that matches your CSV (comma, semicolon, or tab).' },
+      { q: 'Is my data uploaded?', a: 'No. Conversion runs entirely in your browser; your data never leaves your device.' }
+    ],
+    status: 'live',
+    icon: '📋'
+  },
+  {
+    slug: 'case-converter',
+    title: 'Case Converter',
+    description: 'Convert text between camelCase, PascalCase, snake_case, kebab-case, and Title Case. Free online tool for developers and writers.',
+    category: 'dev',
+    keywords: ['case converter', 'camelCase', 'snake_case', 'kebab-case', 'PascalCase', 'text case converter'],
+    faqs: [
+      { q: 'What cases are supported?', a: 'camelCase, PascalCase, snake_case, kebab-case, and Title Case. Paste your text and pick the target format.' },
+      { q: 'Is this tool free?', a: 'Yes. Conversion runs in your browser with no signup or upload.' }
+    ],
+    status: 'live',
+    icon: '🔤'
+  },
+  {
     slug: 'character-counter',
     title: 'Character Counter',
     description: 'Count characters, words, sentences, and paragraphs instantly. Check your text against social media platform limits for Twitter, Instagram, TikTok, and more.',

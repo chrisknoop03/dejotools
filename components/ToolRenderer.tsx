@@ -107,6 +107,14 @@ const HtmlEntities = dynamic(() => import("@/tools/dev/HtmlEntities").then(m => 
   loading: () => <ToolLoading />
 });
 
+const CsvToJson = dynamic(() => import("@/tools/dev/CsvToJson").then(m => m.CsvToJson), {
+  loading: () => <ToolLoading />
+});
+
+const CaseConverter = dynamic(() => import("@/tools/dev/CaseConverter").then(m => m.CaseConverter), {
+  loading: () => <ToolLoading />
+});
+
 const CharacterCounter = dynamic(() => import("@/tools/creator/CharacterCounter").then(m => m.CharacterCounter), {
   loading: () => <ToolLoading />
 });
@@ -163,6 +171,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'json-to-csv': JsonToCsv,
   'regex-tester': RegexTester,
   'html-entity-encoder': HtmlEntities,
+  'csv-to-json': CsvToJson,
+  'case-converter': CaseConverter,
   'character-counter': CharacterCounter,
   'hashtag-generator': HashtagGenerator,
   'tiktok-bio-formatter': TikTokBioFormatter,
