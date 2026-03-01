@@ -47,6 +47,20 @@ const blogPosts = [
     date: "2026-02-11",
     category: "Image Tools",
   },
+  {
+    slug: "json-csv-encoding-tools-guide",
+    title: "JSON, CSV & Encoding: Free Tools for Working with Data",
+    description: "Format JSON, convert to CSV, encode and decode Base64, URLs, and HTML. Free browser-based tools for developers and data work.",
+    date: "2026-02-11",
+    category: "Development",
+  },
+  {
+    slug: "dev-utilities-passwords-placeholders-guide",
+    title: "Free Dev Utilities: Passwords, Placeholders, Timestamps & More",
+    description: "Generate passwords, create Lorem Ipsum text, convert timestamps, create UUIDs, and convert colors. Handy free tools for everyday dev tasks.",
+    date: "2026-02-11",
+    category: "Development",
+  },
 ];
 
 export default function BlogPage() {

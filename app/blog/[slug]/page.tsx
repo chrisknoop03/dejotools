@@ -752,6 +752,232 @@ const blogPosts: Record<
       </>
     ),
   },
+  "json-csv-encoding-tools-guide": {
+    title: "JSON, CSV & Encoding: Free Tools for Working with Data",
+    description:
+      "Format JSON, convert to CSV, encode and decode Base64, URLs, and HTML. Free browser-based tools for developers and data work.",
+    date: "2026-02-11",
+    category: "Development",
+    content: (
+      <>
+        <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+          Developers and data workers constantly deal with JSON, CSV, and
+          encoded strings. Whether you&apos;re debugging API responses,
+          preparing data for spreadsheets, or safely embedding text in URLs and
+          HTML, the right free tools can save time. Here&apos;s a quick guide to
+          browser-based tools that handle formatting, conversion, and encoding.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Format and Validate JSON
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Minified or malformed JSON is hard to read and debug. A{" "}
+          <Link
+            href="/tools/json-formatter"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            JSON formatter
+          </Link>{" "}
+          beautifies JSON with indentation and highlights syntax errors so you
+          can fix them fast. You can also minify formatted JSON for production.
+          Paste your string, format or minify, and copy the result—no uploads,
+          all in the browser.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Convert JSON to CSV
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          APIs often return JSON arrays of objects; spreadsheets expect CSV. Our{" "}
+          <Link
+            href="/tools/json-to-csv"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            JSON to CSV converter
+          </Link>{" "}
+          turns an array of objects into a CSV with one row per object. Choose
+          comma, semicolon, or tab as the delimiter to match Excel or other
+          tools. Handy for reports, imports, and quick data exports.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Base64 Encode and Decode
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Base64 is used for embedding binary data in text—e.g. images in HTML
+          or tokens in APIs. Our{" "}
+          <Link
+            href="/tools/base64-encode-decode"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Base64 encoder/decoder
+          </Link>{" "}
+          encodes text to Base64 and decodes Base64 back to readable text,
+          including Unicode. No server involved; paste, convert, and copy.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          URL and HTML Encoding
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Query parameters and HTML content often need encoding. The{" "}
+          <Link
+            href="/tools/url-encode-decode"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            URL encoder/decoder
+          </Link>{" "}
+          handles percent-encoding for URLs. The{" "}
+          <Link
+            href="/tools/html-entity-encoder"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            HTML entity encoder/decoder
+          </Link>{" "}
+          converts special characters to entities (e.g. &amp;, &lt;) and back,
+          so you can safely embed user input in HTML or decode entity-encoded
+          text.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Test Regular Expressions
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Writing regex is easier when you can test against sample text. A{" "}
+          <Link
+            href="/tools/regex-tester"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            regex tester
+          </Link>{" "}
+          lets you enter a pattern and flags (global, case-insensitive,
+          multiline), paste test strings, and see matches and positions. Use it
+          to debug patterns before putting them in code.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Conclusion
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          JSON formatting, CSV conversion, and encoding are everyday tasks.
+          Free browser-based tools for JSON, CSV, Base64, URL encoding, HTML
+          entities, and regex testing keep your workflow fast and your data
+          private—nothing leaves your device.
+        </p>
+      </>
+    ),
+  },
+  "dev-utilities-passwords-placeholders-guide": {
+    title: "Free Dev Utilities: Passwords, Placeholders, Timestamps & More",
+    description:
+      "Generate passwords, create Lorem Ipsum text, convert timestamps, create UUIDs, and convert colors. Handy free tools for everyday dev tasks.",
+    date: "2026-02-11",
+    category: "Development",
+    content: (
+      <>
+        <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+          Day-to-day dev work often needs random passwords, placeholder text,
+          timestamps, unique IDs, and color codes. Instead of scripting
+          one-off solutions or hunting for sites, you can use a single set of
+          free browser-based utilities. Here&apos;s a roundup of tools that
+          cover passwords, Lorem Ipsum, timestamps, UUIDs, and color conversion.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Generate Strong Passwords
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Creating secure passwords for dev accounts, API keys, or test users
+          is easier with a{" "}
+          <Link
+            href="/tools/password-generator"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            password generator
+          </Link>{" "}
+          that uses the browser&apos;s crypto API. Choose length and character
+          types (uppercase, lowercase, numbers, symbols), generate one or
+          several passwords, and copy. No server, no storage—just random
+          passwords on demand.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Placeholder Text with Lorem Ipsum
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          When you need filler text for layouts or demos, a{" "}
+          <Link
+            href="/tools/lorem-ipsum-generator"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Lorem Ipsum generator
+          </Link>{" "}
+          produces paragraphs, sentences, or words. Set the count, copy, and
+          paste into your mockups or docs. Simple and fast for wireframes and
+          UI testing.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Convert Unix Timestamps
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          APIs and databases often use Unix timestamps. A{" "}
+          <Link
+            href="/tools/timestamp-converter"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            timestamp converter
+          </Link>{" "}
+          turns seconds or milliseconds into human-readable dates and vice
+          versa. Handy for debugging time-based logic, log analysis, or
+          converting between systems. Shows both local time and UTC.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Create UUIDs
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Unique identifiers are common in apps and databases. A{" "}
+          <Link
+            href="/tools/uuid-generator"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            UUID generator
+          </Link>{" "}
+          creates cryptographically random UUIDs (e.g. v4). Generate one or
+          many at once for seeding data, testing, or assigning IDs. Copy a
+          single UUID or the whole list.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Convert Color Formats
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Switching between HEX, RGB, and HSL is routine in front-end work. A{" "}
+          <Link
+            href="/tools/hex-rgb-converter"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            HEX to RGB color converter
+          </Link>{" "}
+          converts between these formats and shows a live preview. Enter a hex
+          code or RGB values and get the equivalent in other formats—useful for
+          CSS, design handoffs, and theme tweaks.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Conclusion
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">
+          Passwords, placeholders, timestamps, UUIDs, and colors come up all the
+          time in development. Free online utilities for these tasks run in your
+          browser with no signup and no data sent to servers. Keep this set
+          bookmarked for quicker, safer workflows.
+        </p>
+      </>
+    ),
+  },
 };
 
 export async function generateStaticParams() {
