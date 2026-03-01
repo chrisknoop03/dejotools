@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Ensure tool count is always current (no static cache)
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   const liveTools = getLiveTools();
   const toolsByCategory = Object.keys(categories).reduce((acc, category) => {
