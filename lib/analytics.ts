@@ -68,13 +68,22 @@ export function trackConvertSuccess(toolSlug: string, outputType?: string): void
 }
 
 /**
- * Track conversion error
+ * Track conversion error.
+ * Sends tool_slug and error_message to GA4. To see which tool had errors in GA4:
+ * 1. Admin → Custom definitions → Create custom dimension
+ * 2. Dimension name: "Tool slug", Scope: Event, Event parameter: tool_slug
+ * 3. Repeat for "Error message", Event parameter: error_message
+ * 4. In Reports/Explorations, add these dimensions when viewing convert_error events.
+ * Also logs to console so you can see tool + error in DevTools or when debugging.
  */
 export function trackConvertError(toolSlug: string, errorMessage: string): void {
-  trackEvent('convert_error', {
+  const payload = {
     tool_slug: toolSlug,
     error_message: errorMessage,
-  });
+  };
+  // Always log convert errors to console so you can identify the tool when debugging
+  console.warn('[DejoTools convert_error]', toolSlug, errorMessage, payload);
+  trackEvent('convert_error', payload);
 }
 
 /**
