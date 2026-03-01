@@ -62,90 +62,78 @@ export default function CreatorToolsPage() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <span className="text-6xl mb-4 block">{categoryInfo.icon}</span>
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Free Tools for Content Creators
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Format captions, fix subtitles, and streamline your content workflow. 
+          <h1 className="text-4xl font-bold text-white mb-4">Free Tools for Content Creators</h1>
+          <p className="text-xl text-[#9CA3AF] max-w-2xl mx-auto">
+            Format captions, fix subtitles, and streamline your content workflow.
             Built for YouTubers, TikTokers, and social media creators.
           </p>
         </div>
 
-        {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-pink-50 dark:bg-pink-900/20 rounded-xl p-6 text-center">
+          <div className="rounded-2xl p-6 text-center border border-white/10 bg-[#0B0F1F]/60">
             <div className="text-3xl mb-2">📱</div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Social Ready</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Optimized for all platforms</p>
+            <h3 className="font-semibold text-white mb-1">Social Ready</h3>
+            <p className="text-sm text-[#9CA3AF]">Optimized for all platforms</p>
           </div>
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 text-center">
+          <div className="rounded-2xl p-6 text-center border border-white/10 bg-[#0B0F1F]/60">
             <div className="text-3xl mb-2">⚡</div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Save Time</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Automate repetitive tasks</p>
+            <h3 className="font-semibold text-white mb-1">Save Time</h3>
+            <p className="text-sm text-[#9CA3AF]">Automate repetitive tasks</p>
           </div>
-          <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-6 text-center">
+          <div className="rounded-2xl p-6 text-center border border-white/10 bg-[#0B0F1F]/60">
             <div className="text-3xl mb-2">🎨</div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Pro Quality</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Professional results instantly</p>
+            <h3 className="font-semibold text-white mb-1">Pro Quality</h3>
+            <p className="text-sm text-[#9CA3AF]">Professional results instantly</p>
           </div>
         </div>
 
-        {/* Tools Grid */}
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-          Available Creator Tools
-        </h2>
+        <h2 className="text-2xl font-bold text-white mb-6">Available Creator Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {tools.map((tool) => (
             <Link
               key={tool.slug}
               href={`/tools/${tool.slug}`}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all border border-gray-200 dark:border-gray-700 group hover:border-blue-300 dark:hover:border-blue-600"
+              className="rounded-2xl p-6 border border-white/10 bg-[#0B0F1F]/60 hover:border-[#6366F1]/30 transition-all group"
             >
               <div className="flex items-start gap-4">
                 <span className="text-3xl flex-shrink-0">{tool.icon}</span>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="font-semibold text-white group-hover:text-[#6366F1] transition-colors">
                     {tool.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-2">
-                    {tool.description}
-                  </p>
+                  <p className="text-sm text-[#9CA3AF] mt-1 line-clamp-2">{tool.description}</p>
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* SEO Content */}
-        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-8">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Tools Built for Creators
-          </h2>
-          <div className="prose prose-gray dark:prose-invert max-w-none">
-            <p className="text-gray-600 dark:text-gray-400">
-              Creating content is hard enough without fighting with formatting issues. Our creator 
-              tools help you polish your captions, fix subtitle files, and handle the technical 
+        <div className="rounded-2xl p-8 border border-white/10 bg-[#0B0F1F]/60">
+          <h2 className="text-2xl font-bold text-white mb-4">Tools Built for Creators</h2>
+          <div className="max-w-none">
+            <p className="text-[#9CA3AF]">
+              Creating content is hard enough without fighting with formatting issues. Our creator
+              tools help you polish your captions, fix subtitle files, and handle the technical
               details so you can focus on what matters—creating great content.
             </p>
-            <p className="text-gray-600 dark:text-gray-400 mt-4">
-              Whether you&apos;re posting to Instagram, uploading to YouTube, or publishing across 
-              multiple platforms, these tools ensure your content looks professional every time. 
+            <p className="text-[#9CA3AF] mt-4">
+              Whether you&apos;re posting to Instagram, uploading to YouTube, or publishing across
+              multiple platforms, these tools ensure your content looks professional every time.
               All processing happens in your browser, so your content stays private.
             </p>
           </div>
         </div>
 
-        {/* Browse Other Categories */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 dark:text-gray-400 mb-4">Explore more tools</p>
+          <p className="text-[#9CA3AF] mb-4">Explore more tools</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/tools/image" className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <Link href="/tools/image" className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-[#9CA3AF] hover:bg-white/10 hover:text-white transition-colors">
               🖼️ Image Tools
             </Link>
-            <Link href="/tools/pdf" className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <Link href="/tools/pdf" className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-[#9CA3AF] hover:bg-white/10 hover:text-white transition-colors">
               📄 PDF Tools
             </Link>
-            <Link href="/tools/dev" className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <Link href="/tools/dev" className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-[#9CA3AF] hover:bg-white/10 hover:text-white transition-colors">
               🛠️ Dev Tools
             </Link>
           </div>
