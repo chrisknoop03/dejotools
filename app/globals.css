@@ -1,19 +1,82 @@
 @import "tailwindcss";
 
+/* Modern SaaS / Tech startup – dark first */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-primary: #050816;
+  --bg-secondary: #0B0F1F;
+  --bg-card: rgba(15, 23, 42, 0.6);
+  --accent: #6366F1;
+  --accent-hover: #4F46E5;
+  --accent-glow: rgba(99, 102, 241, 0.35);
+  --text-primary: #ffffff;
+  --text-muted: #9CA3AF;
+  --border-subtle: rgba(148, 163, 184, 0.12);
+  --gradient-accent: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: ui-sans-serif, system-ui, "Inter", "SF Pro Display", -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Soft gradient background with optional right-side shape */
+.bg-saas {
+  background: linear-gradient(135deg, #050816 0%, #0B0F1F 50%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-saas::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(ellipse, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Glass / elevated card */
+.card-glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-glow {
+  box-shadow: 0 0 40px -10px var(--accent-glow);
+}
+
+/* Pill button primary */
+.btn-pill-primary {
+  background: var(--gradient-accent);
+  color: white;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: filter 0.2s, box-shadow 0.2s;
+}
+.btn-pill-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 24px var(--accent-glow);
+}
+
+/* Pill button secondary */
+.btn-pill-secondary {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn-pill-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border-color: rgba(148, 163, 184, 0.2);
 }

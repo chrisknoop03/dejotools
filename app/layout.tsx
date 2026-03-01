@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         {/* Google AdSense */}
         <script
@@ -46,7 +46,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 antialiased">
+      <body className="min-h-screen flex flex-col bg-[#050816] text-white antialiased">
         <AnalyticsProvider>
           <Header />
           <main className="flex-1">

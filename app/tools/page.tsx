@@ -26,11 +26,11 @@ export default async function ToolsPage({
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+        <h1 className="text-3xl font-bold text-white mb-2">
           {selectedCategory ? categories[selectedCategory].name : "All Tools"}
         </h1>
-        <p className="text-gray-600 dark:text-gray-400">
-          {selectedCategory 
+        <p className="text-[#9CA3AF]">
+          {selectedCategory
             ? categories[selectedCategory].description
             : "Browse our collection of free online tools and utilities"}
         </p>
@@ -41,9 +41,9 @@ export default async function ToolsPage({
         <a
           href="/tools"
           className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-            !selectedCategory 
-              ? 'bg-blue-600 text-white' 
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+            !selectedCategory
+              ? "bg-gradient-to-r from-[#6366F1] to-[#4F46E5] text-white"
+              : "bg-white/5 text-[#9CA3AF] hover:bg-white/10 hover:text-white border border-white/10"
           }`}
         >
           All
@@ -53,9 +53,9 @@ export default async function ToolsPage({
             key={key}
             href={`/tools?category=${key}`}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              selectedCategory === key 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+              selectedCategory === key
+                ? "bg-gradient-to-r from-[#6366F1] to-[#4F46E5] text-white"
+                : "bg-white/5 text-[#9CA3AF] hover:bg-white/10 hover:text-white border border-white/10"
             }`}
           >
             {category.icon} {category.name}
@@ -65,22 +65,22 @@ export default async function ToolsPage({
 
       {/* Tools Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredTools.map(tool => (
+        {filteredTools.map((tool) => (
           <a
             key={tool.slug}
             href={`/tools/${tool.slug}`}
-            className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-gray-700 group hover:border-blue-300 dark:hover:border-blue-600"
+            className="rounded-2xl p-5 border border-white/10 bg-[#0B0F1F]/60 hover:border-[#6366F1]/30 transition-all group"
           >
             <div className="flex items-start gap-4">
               <span className="text-3xl flex-shrink-0">{tool.icon}</span>
               <div className="flex-1 min-w-0">
-                <h2 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h2 className="font-semibold text-white group-hover:text-[#6366F1] transition-colors">
                   {tool.title}
                 </h2>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-2">
+                <p className="text-sm text-[#9CA3AF] mt-1 line-clamp-2">
                   {tool.description}
                 </p>
-                <span className="inline-block mt-2 text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded">
+                <span className="inline-block mt-2 text-xs px-2 py-1 bg-white/10 text-[#9CA3AF] rounded-lg">
                   {categories[tool.category].name}
                 </span>
               </div>
@@ -91,8 +91,8 @@ export default async function ToolsPage({
 
       {filteredTools.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-600 dark:text-gray-400">No tools found in this category.</p>
-          <a href="/tools" className="text-blue-600 dark:text-blue-400 hover:underline mt-2 inline-block">
+          <p className="text-[#9CA3AF]">No tools found in this category.</p>
+          <a href="/tools" className="text-[#6366F1] hover:underline mt-2 inline-block">
             View all tools
           </a>
         </div>

@@ -67,10 +67,8 @@ export default function BlogPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <header className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Blog
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400">
+        <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
+        <p className="text-xl text-[#9CA3AF]">
           Guides, tips, and tutorials for using free online tools effectively
         </p>
       </header>
@@ -79,15 +77,15 @@ export default function BlogPage() {
         {blogPosts.map((post) => (
           <article
             key={post.slug}
-            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
+            className="rounded-2xl p-6 border border-white/10 bg-[#0B0F1F]/60 hover:border-[#6366F1]/20 transition-all"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="text-xs font-medium px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded">
+                  <span className="text-xs font-medium px-2 py-1 bg-[#6366F1]/20 text-[#6366F1] rounded-lg">
                     {post.category}
                   </span>
-                  <time className="text-sm text-gray-500 dark:text-gray-400">
+                  <time className="text-sm text-[#9CA3AF]">
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
@@ -95,20 +93,15 @@ export default function BlogPage() {
                     })}
                   </time>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  >
+                <h2 className="text-2xl font-bold text-white mb-2">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-[#6366F1] transition-colors">
                     {post.title}
                   </Link>
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {post.description}
-                </p>
+                <p className="text-[#9CA3AF] mb-4">{post.description}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                  className="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#818cf8] font-medium transition-colors"
                 >
                   Read more
                   <svg

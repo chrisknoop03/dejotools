@@ -6,65 +6,82 @@ import { categories } from "@/lib/tools-config";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
 
   return (
-    <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-[#050816]/80 backdrop-blur-md border-b border-white/5">
       <nav className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-blue-600 dark:text-blue-400">
-            DejoTools
+          <Link
+            href="/"
+            className="text-xl font-bold text-white"
+          >
+            Dejo<span className="text-[#6366F1]">Tools</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-4">
+          <div className="hidden md:flex items-center gap-2">
+            <div className="relative">
+              <button
+                onClick={() => setToolsOpen(!toolsOpen)}
+                className="flex items-center gap-1 px-4 py-2 rounded-full text-[#9CA3AF] hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
+              >
                 Tools
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {/* Dropdown */}
-              <div className="absolute top-full left-0 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 -mt-1">
-                <div className="py-2">
-                  <Link 
-                    href="/tools" 
-                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    All Tools
-                  </Link>
-                  <hr className="my-2 border-gray-200 dark:border-gray-700" />
-                  {Object.entries(categories).map(([key, category]) => (
+              {toolsOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setToolsOpen(false)} />
+                  <div className="absolute top-full left-0 mt-1 w-56 rounded-2xl bg-[#0B0F1F]/95 border border-white/10 shadow-xl shadow-black/20 py-2 z-50 backdrop-blur-xl">
                     <Link
-                      key={key}
-                      href={`/tools/${key}`}
-                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      href="/tools"
+                      className="flex items-center gap-2 px-4 py-2.5 text-sm text-[#9CA3AF] hover:text-white hover:bg-white/5 transition-colors"
+                      onClick={() => setToolsOpen(false)}
                     >
-                      <span>{category.icon}</span>
-                      <span>{category.name}</span>
+                      All Tools
                     </Link>
-                  ))}
-                </div>
-              </div>
+                    <div className="my-1 border-t border-white/10" />
+                    {Object.entries(categories).map(([key, category]) => (
+                      <Link
+                        key={key}
+                        href={`/tools/${key}`}
+                        className="flex items-center gap-2 px-4 py-2.5 text-sm text-[#9CA3AF] hover:text-white hover:bg-white/5 transition-colors"
+                        onClick={() => setToolsOpen(false)}
+                      >
+                        <span>{category.icon}</span>
+                        <span>{category.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
-            <Link 
-              href="/blog" 
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            <Link
+              href="/blog"
+              className="px-4 py-2 rounded-full text-[#9CA3AF] hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
             >
               Blog
             </Link>
-            <Link 
-              href="/privacy" 
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            <Link
+              href="/privacy"
+              className="px-4 py-2 rounded-full text-[#9CA3AF] hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
             >
               Privacy
+            </Link>
+            <Link
+              href="/tools"
+              className="ml-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#6366F1] to-[#4F46E5] text-white text-sm font-medium hover:brightness-110 transition-all shadow-lg shadow-[#6366F1]/25"
+            >
+              Browse Tools
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-600 dark:text-gray-300"
+            className="md:hidden p-2 rounded-lg text-[#9CA3AF] hover:text-white hover:bg-white/5"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -82,11 +99,11 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 dark:border-gray-700 py-4">
+          <div className="md:hidden py-4 border-t border-white/5">
             <div className="space-y-1">
-              <Link 
+              <Link
                 href="/tools"
-                className="block px-2 py-2 text-gray-900 dark:text-white font-medium"
+                className="block px-4 py-3 rounded-xl text-white font-medium bg-white/5"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 All Tools
@@ -95,34 +112,41 @@ export function Header() {
                 <Link
                   key={key}
                   href={`/tools/${key}`}
-                  className="flex items-center gap-2 px-2 py-2 text-gray-600 dark:text-gray-300"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl text-[#9CA3AF] hover:bg-white/5 hover:text-white"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span>{category.icon}</span>
                   <span>{category.name}</span>
                 </Link>
               ))}
-              <hr className="my-2 border-gray-200 dark:border-gray-700" />
-              <Link 
+              <div className="my-2 border-t border-white/10" />
+              <Link
                 href="/blog"
-                className="block px-2 py-2 text-gray-600 dark:text-gray-300"
+                className="block px-4 py-3 rounded-xl text-[#9CA3AF] hover:bg-white/5"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
               </Link>
-              <Link 
+              <Link
                 href="/privacy"
-                className="block px-2 py-2 text-gray-600 dark:text-gray-300"
+                className="block px-4 py-3 rounded-xl text-[#9CA3AF] hover:bg-white/5"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Privacy
               </Link>
-              <Link 
+              <Link
                 href="/terms"
-                className="block px-2 py-2 text-gray-600 dark:text-gray-300"
+                className="block px-4 py-3 rounded-xl text-[#9CA3AF] hover:bg-white/5"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Terms
+              </Link>
+              <Link
+                href="/tools"
+                className="mt-4 flex justify-center mx-4 py-3 rounded-full bg-gradient-to-r from-[#6366F1] to-[#4F46E5] text-white font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Browse Tools
               </Link>
             </div>
           </div>

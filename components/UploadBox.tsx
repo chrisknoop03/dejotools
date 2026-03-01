@@ -108,12 +108,12 @@ export function UploadBox({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         className={`
-          relative border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all
-          ${isDragging 
-            ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20' 
-            : 'border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+          relative border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition-all
+          ${isDragging
+            ? "border-[#6366F1] bg-[#6366F1]/10"
+            : "border-white/20 hover:border-[#6366F1]/50 hover:bg-white/5"
           }
-          ${error ? 'border-red-400 dark:border-red-500' : ''}
+          ${error ? "border-red-400" : ""}
         `}
       >
         <input
@@ -125,8 +125,8 @@ export function UploadBox({
         />
         
         <div className="flex flex-col items-center gap-3">
-          <svg 
-            className={`w-12 h-12 ${isDragging ? 'text-blue-500' : 'text-gray-400 dark:text-gray-500'}`}
+          <svg
+            className={`w-12 h-12 ${isDragging ? "text-[#6366F1]" : "text-[#9CA3AF]"}`}
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -157,9 +157,7 @@ export function UploadBox({
       </div>
       
       {error && (
-        <p className="mt-2 text-sm text-red-600 dark:text-red-400">
-          {error}
-        </p>
+        <p className="mt-2 text-sm text-red-400">{error}</p>
       )}
     </div>
   );

@@ -26,28 +26,25 @@ export function MoreTools({ currentSlug, currentCategory }: MoreToolsProps) {
   if (otherCategoryTools.length === 0) return null;
 
   return (
-    <div className="mt-12 border-t border-gray-200 dark:border-gray-700 pt-8">
-      <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-        More Free Tools
-      </h2>
-      
+    <div className="mt-12 border-t border-white/10 pt-8">
+      <h2 className="text-xl font-bold text-white mb-6">More Free Tools</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Object.entries(toolsByCategory).map(([cat, tools]) => (
           <div key={cat} className="space-y-3">
-            <Link 
+            <Link
               href={`/tools/${cat}`}
-              className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="flex items-center gap-2 text-sm font-semibold text-[#9CA3AF] hover:text-[#6366F1] transition-colors"
             >
               <span>{categories[cat as ToolCategory].icon}</span>
               <span>{categories[cat as ToolCategory].name}</span>
-              <span className="text-gray-400">→</span>
+              <span className="opacity-70">→</span>
             </Link>
             <ul className="space-y-2">
-              {tools.slice(0, 3).map(tool => (
+              {tools.slice(0, 3).map((tool) => (
                 <li key={tool.slug}>
                   <Link
                     href={`/tools/${tool.slug}`}
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors block"
+                    className="text-sm text-[#9CA3AF] hover:text-[#6366F1] transition-colors block"
                   >
                     {tool.title}
                   </Link>
@@ -57,12 +54,10 @@ export function MoreTools({ currentSlug, currentCategory }: MoreToolsProps) {
           </div>
         ))}
       </div>
-
-      {/* CTA to all tools */}
       <div className="mt-8 text-center">
         <Link
           href="/tools"
-          className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+          className="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#818cf8] font-medium transition-colors"
         >
           Browse all {allTools.length} free tools
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

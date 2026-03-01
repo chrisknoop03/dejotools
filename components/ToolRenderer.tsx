@@ -138,7 +138,7 @@ const EmojiTextGenerator = dynamic(() => import("@/tools/creator/EmojiTextGenera
 function ToolLoading() {
   return (
     <div className="flex items-center justify-center py-12">
-      <div className="w-8 h-8 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin"></div>
+      <div className="w-8 h-8 border-4 border-white/20 border-t-[#6366F1] rounded-full animate-spin"></div>
     </div>
   );
 }

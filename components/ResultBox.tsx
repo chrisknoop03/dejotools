@@ -53,8 +53,8 @@ export function ResultBox({
   if (isProcessing) {
     return (
       <div className="flex flex-col items-center justify-center py-12">
-        <div className="w-12 h-12 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin mb-4"></div>
-        <p className="text-gray-600 dark:text-gray-400">Processing...</p>
+        <div className="w-12 h-12 border-4 border-white/20 border-t-[#6366F1] rounded-full animate-spin mb-4"></div>
+        <p className="text-[#9CA3AF]">Processing...</p>
       </div>
     );
   }
@@ -66,83 +66,50 @@ export function ResultBox({
   return (
     <div className="w-full">
       {/* Preview */}
-      {previewType === 'image' && preview && (
-        <div className="mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg p-4 flex items-center justify-center">
-          <img 
-            src={preview} 
-            alt="Preview" 
-            className="max-h-64 max-w-full object-contain rounded"
-          />
-        </div>
-      )}
-      
-      {previewType === 'text' && preview && (
-        <div className="mb-4 bg-gray-100 dark:bg-gray-700 rounded-lg p-4 max-h-64 overflow-auto">
-          <pre className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-mono">
-            {preview}
-          </pre>
+      {previewType === "image" && preview && (
+        <div className="mb-4 bg-white/5 rounded-xl p-4 flex items-center justify-center border border-white/10">
+          <img src={preview} alt="Preview" className="max-h-64 max-w-full object-contain rounded" />
         </div>
       )}
 
-      {/* Result Info */}
-      <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+      {previewType === "text" && preview && (
+        <div className="mb-4 bg-white/5 rounded-xl p-4 max-h-64 overflow-auto border border-white/10">
+          <pre className="text-sm text-[#9CA3AF] whitespace-pre-wrap font-mono">{preview}</pre>
+        </div>
+      )}
+
+      <div className="flex items-center justify-between p-4 bg-[#6366F1]/10 border border-[#6366F1]/30 rounded-xl">
         <div className="flex items-center gap-3">
-          <svg 
-            className="w-6 h-6 text-green-600 dark:text-green-400" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M5 13l4 4L19 7" 
-            />
+          <svg className="w-6 h-6 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
           <div>
-            <p className="font-medium text-gray-900 dark:text-white">
-              Ready to download
-            </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              {filename}
-            </p>
+            <p className="font-medium text-white">Ready to download</p>
+            <p className="text-sm text-[#9CA3AF]">{filename}</p>
           </div>
         </div>
       </div>
 
-      {/* Action Buttons */}
       <div className="flex gap-3 mt-4">
         <button
           onClick={handleDownload}
-          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="flex-1 bg-gradient-to-r from-[#6366F1] to-[#4F46E5] hover:brightness-110 text-white font-medium py-3 px-6 rounded-full transition-all flex items-center justify-center gap-2"
         >
-          <svg 
-            className="w-5 h-5" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" 
-            />
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          {downloadStarted ? 'Download Again' : 'Download'}
+          {downloadStarted ? "Download Again" : "Download"}
         </button>
-        
         <button
           onClick={onReset}
-          className="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          className="px-6 py-3 border border-white/20 text-[#9CA3AF] font-medium rounded-full hover:bg-white/5 hover:text-white transition-colors"
         >
           Start Over
         </button>
       </div>
 
       {downloadStarted && (
-        <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+        <p className="text-center text-sm text-[#9CA3AF] mt-4">
           Download started! Check your downloads folder.
         </p>
       )}

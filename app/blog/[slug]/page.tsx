@@ -1032,21 +1032,18 @@ export default async function BlogPostPage({
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <article className="prose prose-gray dark:prose-invert max-w-none">
+      <article className="max-w-none">
         <header className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <Link
-              href="/blog"
-              className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
-            >
+            <Link href="/blog" className="text-sm text-[#6366F1] hover:text-[#818cf8]">
               ← Back to Blog
             </Link>
           </div>
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-xs font-medium px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded">
+            <span className="text-xs font-medium px-2 py-1 bg-[#6366F1]/20 text-[#6366F1] rounded-lg">
               {post.category}
             </span>
-            <time className="text-sm text-gray-500 dark:text-gray-400">
+            <time className="text-sm text-[#9CA3AF]">
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
@@ -1054,30 +1051,20 @@ export default async function BlogPostPage({
               })}
             </time>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {post.title}
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
-            {post.description}
-          </p>
+          <h1 className="text-4xl font-bold text-white mb-4">{post.title}</h1>
+          <p className="text-xl text-[#9CA3AF]">{post.description}</p>
         </header>
 
-        <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <div className="text-[#9CA3AF] leading-relaxed [&_h2]:text-white [&_a]:text-[#6366F1] [&_a:hover]:text-[#818cf8]">
           {post.content}
         </div>
 
-        <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <footer className="mt-12 pt-8 border-t border-white/10">
           <div className="flex items-center justify-between">
-            <Link
-              href="/blog"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
+            <Link href="/blog" className="text-[#6366F1] hover:text-[#818cf8]">
               ← Back to Blog
             </Link>
-            <Link
-              href="/tools"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
+            <Link href="/tools" className="text-[#6366F1] hover:text-[#818cf8]">
               Browse All Tools →
             </Link>
           </div>
