@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Smooth flow – CSS only, no extra JS or layout cost */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* Modern SaaS / Tech startup – dark first */
 :root {
   --bg-primary: #050816;
