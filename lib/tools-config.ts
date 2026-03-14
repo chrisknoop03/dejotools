@@ -705,6 +705,29 @@ export const tools: Tool[] = [
     icon: '🔤'
   },
   {
+    slug: 'text-similarity-checker',
+    title: 'Text Similarity Checker',
+    description: 'Compare two texts and see how similar they are. Get an estimated similarity percentage and highlighted overlapping words. All calculations run in your browser.',
+    category: 'dev',
+    keywords: ['text similarity', 'similarity checker', 'duplicate content', 'plagiarism checker', 'compare texts', 'text overlap'],
+    faqs: [
+      {
+        q: 'Is this a full plagiarism checker?',
+        a: 'This tool compares two pieces of text that you provide and estimates their similarity based on overlapping words. It does not search the wider web or external databases, so it is not a full plagiarism detection service.'
+      },
+      {
+        q: 'Does my text leave my device?',
+        a: 'No. All processing happens locally in your browser. None of your text is uploaded to any server, which keeps your content private.'
+      },
+      {
+        q: 'How is similarity calculated?',
+        a: 'We normalize both texts, extract unique words, and then calculate how many words appear in both texts compared to the total unique words (Jaccard similarity). The result is shown as a percentage.'
+      }
+    ],
+    status: 'live',
+    icon: '🧬'
+  },
+  {
     slug: 'character-counter',
     title: 'Character Counter',
     description: 'Count characters, words, sentences, and paragraphs instantly. Check your text against social media platform limits for Twitter, Instagram, TikTok, and more.',

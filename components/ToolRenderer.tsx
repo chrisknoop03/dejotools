@@ -115,6 +115,10 @@ const CaseConverter = dynamic(() => import("@/tools/dev/CaseConverter").then(m =
   loading: () => <ToolLoading />
 });
 
+const TextSimilarityChecker = dynamic(() => import("@/tools/dev/TextSimilarityChecker").then(m => m.TextSimilarityChecker), {
+  loading: () => <ToolLoading />
+});
+
 const CharacterCounter = dynamic(() => import("@/tools/creator/CharacterCounter").then(m => m.CharacterCounter), {
   loading: () => <ToolLoading />
 });
@@ -173,6 +177,7 @@ const toolComponents: Record<string, React.ComponentType> = {
   'html-entity-encoder': HtmlEntities,
   'csv-to-json': CsvToJson,
   'case-converter': CaseConverter,
+  'text-similarity-checker': TextSimilarityChecker,
   'character-counter': CharacterCounter,
   'hashtag-generator': HashtagGenerator,
   'tiktok-bio-formatter': TikTokBioFormatter,
